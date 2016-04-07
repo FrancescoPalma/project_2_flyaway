@@ -1,11 +1,14 @@
 module.exports = () => {
   return {
     files: [
-      './client/src/app/*.js'
+      'client/src/models/*.js'
     ],
     tests: [
-      './client/src/app/specs/*_spec.js'
+      'client/src/specs/*.js'
     ],
     debug: true,
+    env: {
+      type: 'node',
+    }
   }
 }

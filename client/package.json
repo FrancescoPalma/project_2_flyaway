@@ -11,6 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
+    "file-loader": "^0.8.5",
+    "jade": "^1.11.0",
+    "jade-html-loader": "0.0.3",
     "mocha": "^2.4.5",
     "webpack": "^1.12.14"
   }
