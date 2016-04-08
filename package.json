@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server -d",
     "test": "mocha client/src/specs",
     "start": "webpack-dev-server -d --progress --colors"
   },
