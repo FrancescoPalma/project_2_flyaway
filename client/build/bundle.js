@@ -44,15 +44,26 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	var SearchFormView = __webpack_require__(1);
+	var test = new SearchFormView;
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./stylesheets/main.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	window.onload = function() {
+	  test.sayHi();
+	}
 
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	
-
+	function Test() {
+	  var hello = "Hello!";
+	  this.sayHi = function() {
+	    console.log(hello);
+	  }
+	}
+	module.exports = Test;
 
 /***/ }
 /******/ ]);
