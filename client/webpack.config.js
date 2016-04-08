@@ -4,7 +4,7 @@ var webpack = require('webpack');
 var PATHS = {
   app: path.join(__dirname, 'src/app.js'),
   build: path.join(__dirname, 'build'),
-  style: path.join(__dirname, 'src/stylesheets/main.scss')
+  style: path.join(__dirname, 'src/stylesheets/main.sass')
 };
 
 function getEntrySources(sources) {
@@ -24,29 +24,26 @@ config = {
     filename: "bundle.js",
     path: PATHS.build,
   },
-  devtool: "source-map",
-  loaders: [
-    {
-      test: /\.scss$/,
-      loader: "style!css!sass"
-    },
-    {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract(
-        "style",
-        "css!sass")
-     },
-  ],
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin('styles.css')
-  ],
   devServer: {
     contentBase: ".",
     inline: true,
     watch: true,
     hot: true,
-  }
+  },
+  devtool: "source-map",
+  module: {
+    loaders: [
+      {
+        test: /\.sass$/,
+        loader: ExtractTextPlugin.extract(
+          "style-loader", "css-loader!sass-loader")
+      },
+    ],
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin("style.css", {allChunks: true}),
+  ],
 }
 
 
