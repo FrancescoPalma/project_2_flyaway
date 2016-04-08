@@ -1,1 +1,1 @@
-require('./views/index.jade')();
+
