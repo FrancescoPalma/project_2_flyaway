@@ -5,8 +5,6 @@ config = {
     path: "./build/",
   },
   devtool: "source-map",
-  loaders: [
-  ]
 }
 
 
