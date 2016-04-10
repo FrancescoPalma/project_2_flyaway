@@ -9,17 +9,12 @@ function getFlightData() {
       var jsonString = xhr.responseText;
       var data = JSON.parse(jsonString);
       console.log("Data is ready to be processed. Sending it now...");
-      processFlightData(data);
+      breakBigObject(data);
     }
   }
   xhr.open("GET", url);
   console.log("I'm calling the FlightsAPI");
   xhr.send(null);
-}
-
-function processFlightData(data) {
-  var flightsArray = breakBigObject(data);
-  var processedData = extractRelevantInformation(flightsArray);
 }
 
 function breakBigObject(data) {
@@ -40,7 +35,6 @@ function getFlightPrice(data, index) {
 
 module.exports = {
   getFlightData: getFlightData,
-  processFlightData: processFlightData,
   breakBigObject: breakBigObject,
   getOutboundFlights: getOutboundFlights,
   getFlightPrice: getFlightPrice

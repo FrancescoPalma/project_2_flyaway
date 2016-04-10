@@ -1,5 +1,4 @@
 var assert = require('chai').assert;
-var processFlightData = require('../models/flight_api').processFlightData;
 var breakBigObject = require('../models/flight_api').breakBigObject;
 var getOutboundFlights = require('../models/flight_api').getOutboundFlights;
 var getFlightPrice = require('../models/flight_api').getFlightPrice;
