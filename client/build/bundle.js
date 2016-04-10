@@ -44,11 +44,10 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var processFlightData = __webpack_require__(1);
+	var getFlightData = __webpack_require__(1).getFlightData;
 	
 	window.onload = function() {
-	  var data = processFlightData(0, [0, 1]);
-	  console.log(data);
+	  console.log(getFlightData());
 	  console.log("hello");
 	}
 	
@@ -68,8 +67,8 @@
 	    if (xhr.readyState == XMLHttpRequest.DONE) {
 	      var jsonString = xhr.responseText;
 	      var data = JSON.parse(jsonString);
-	      console.log(data);
-	      return data;
+	      console.log("Data is ready to be processed. Sending it now...");
+	      processFlightData(data);
 	    }
 	  }
 	  xhr.open("GET", url);
@@ -77,19 +76,35 @@
 	  xhr.send(null);
 	}
 	
-	function processFlightData() {
-	  console.log("Hello from processFlightData");
-	  var flights = getFlightData();
-	  console.log(flights);
-	  function getValues(flightPackageNum, flights) {
-	    for(var flight in flights){
-	      console.log("im inside the for loop");
-	      return flights.results[flightPackageNum].itineraries[0].outbound.flights[flight].departs_at
-	    }
+	function processFlightData(data) {
+	  console.log("Started processing data in function...");
+	  var flightsArray = breakBigObject(data);
+	  var processedData = extractRelevantInformation(flightsArray);
+	}
+	
+	function breakBigObject(data) {
+	  console.log("breaking down the big mean object");
+	  var array = [];
+	  for(var object of data.results){
+	    array.push(object);
+	  }
+	  return array;
+	}
+	
+	function extractRelevantInformation(flightsArray) {
+	  if (flightsArray[0].itineraries[0].outbound.flights > 1) {
+	
 	  }
 	}
 	
-	module.exports = processFlightData;
+	module.exports = {
+	  getFlightData: getFlightData,
+	  processFlightData: processFlightData,
+	  breakBigObject: breakBigObject,
+	  extractRelevantInformation: extractRelevantInformation
+	}
+	
+	// return flights.results[flightPackageNum].itineraries[0].outbound.flights[flight].departs_at
 
 /***/ },
 /* 2 */

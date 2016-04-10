@@ -9,7 +9,7 @@ function getFlightData() {
       var jsonString = xhr.responseText;
       var data = JSON.parse(jsonString);
       console.log("Data is ready to be processed. Sending it now...");
-      processFlightData(data)
+      processFlightData(data);
     }
   }
   xhr.open("GET", url);
@@ -17,16 +17,33 @@ function getFlightData() {
   xhr.send(null);
 }
 
-function processFlightData() {
-  console.log("Hello from processFlightData");
-  var flights = getFlightData();
-  console.log(flights);
-  function getValues(flightPackageNum, flights) {
-    for(var flight in flights){
-      console.log("im inside the for loop");
-      return flights.results[flightPackageNum].itineraries[0].outbound.flights[flight].departs_at
-    }
-  }
+function processFlightData(data) {
+  var flightsArray = breakBigObject(data);
+  var processedData = extractRelevantInformation(flightsArray);
 }
 
-module.exports = processFlightData;
+function breakBigObject(data) {
+  var array = [];
+  for(var object of data.results){
+    array.push(object);
+  }
+  return array;
+}
+
+function getOutboundFlights(data, index) {
+  return data.results[index].itineraries[0].outbound.flights
+}
+
+function getFlightPrice(data, index) {
+  return data.results[index].fare.total_price
+}
+
+module.exports = {
+  getFlightData: getFlightData,
+  processFlightData: processFlightData,
+  breakBigObject: breakBigObject,
+  getOutboundFlights: getOutboundFlights,
+  getFlightPrice: getFlightPrice
+}
+
+// return flights.results[flightPackageNum].itineraries[0].outbound.flights[flight].departs_at
