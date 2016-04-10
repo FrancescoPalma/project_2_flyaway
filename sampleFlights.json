@@ -1,0 +1,71 @@
+
+  flights: [
+    {
+      "departure": "Edinburgh",
+      "arrival": "Melbourne",
+      "departCountry": "UK",
+      "arrivalCountry": "AUS",
+      "departingDate": "28-03-2016",
+      "departingTime": "08:00:00", 
+      "arrivingDate": "29-03-2016",
+      "arrivingTimes": "15:00:00", 
+      "price": 248
+    },
+    {
+      "departure": "Edinburgh",
+      "arrival": "Melbourne",
+      "departCountry": "UK",
+      "arrivalCountry": "AUS",
+      "departingDate": "28-03-2016",
+      "departingTime": "12:00:00", 
+      "arrivingDate": "29-03-2016",
+      "arrivingTime": "19:00:00", 
+      "price": 256
+    },
+    {
+      "departure": "Edinburgh",
+      "arrival": "Sydney",
+      "departCountry": "UK",
+      "arrivalCountry": "AUS",
+      "departingDate": "28-03-2016",
+      "departingTime": "10:00:00", 
+      "arrivingDate": "29-03-2016",
+      "arrivingTime": "17:00:00", 
+      "price": 293
+    },
+    {
+      "departure": "Edinburgh",
+      "arrival": "Sydney",
+      "departCountry": "UK",
+      "arrivalCountry": "AUS",
+      "departingDate": "28-03-2016",
+      "departingTime": "04:00:00", 
+      "arrivingDate": "29-03-2016", 
+      "arrivingTime": "11:00:00", 
+      "price": 310
+    },
+    {
+      "departure": "Edinburgh",
+      "arrival": "Canberra",
+      "departCountry": "UK",
+      "arrivalCountry": "AUS",
+      "departingDate": "28-03-2016",
+      "departingTime": "11:00:00", 
+      "arrivingDate": "29-03-2016",
+      "arrivingTime": "18:00:00", 
+      "price": 212
+    },
+    {
+      "departure": "Edinburgh",
+      "arrival": "Canberra",
+      "departCountry": "UK",
+      "arrivalCountry": "AUS",
+      "departingDate": "28-03-2016",
+      "departingTime": "10:00:00", 
+      "arrivingDate": "29-03-2016",
+      "arrivingTime": "17:00:00", 
+      "price": 245
+    }
+  ]
+
+  

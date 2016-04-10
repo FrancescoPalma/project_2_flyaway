@@ -3,6 +3,3 @@ var test = new SearchFormView;
 module.hot.accept();
 require('./stylesheets/main.sass');
 
-window.onload = function() {
-  test.sayHi();
-}

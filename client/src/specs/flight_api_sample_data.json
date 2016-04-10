@@ -1,0 +1,318 @@
+{
+    "currency": "GBP",
+    "results": [
+        {
+            "itineraries": [
+                {
+                    "outbound": {
+                        "flights": [
+                            {
+                                "departs_at": "2016-06-25T14:45",
+                                "arrives_at": "2016-06-26T09:00",
+                                "origin": {
+                                    "airport": "LHR",
+                                    "terminal": "4"
+                                },
+                                "destination": {
+                                    "airport": "SGN",
+                                    "terminal": "2"
+                                },
+                                "marketing_airline": "VN",
+                                "operating_airline": "VN",
+                                "flight_number": "50",
+                                "aircraft": "787",
+                                "booking_info": {
+                                    "travel_class": "ECONOMY",
+                                    "booking_code": "L",
+                                    "seats_remaining": 9
+                                }
+                            },
+                            {
+                                "departs_at": "2016-06-26T20:35",
+                                "arrives_at": "2016-06-27T08:15",
+                                "origin": {
+                                    "airport": "SGN",
+                                    "terminal": "2"
+                                },
+                                "destination": {
+                                    "airport": "SYD",
+                                    "terminal": "1"
+                                },
+                                "marketing_airline": "VN",
+                                "operating_airline": "VN",
+                                "flight_number": "773",
+                                "aircraft": "777",
+                                "booking_info": {
+                                    "travel_class": "ECONOMY",
+                                    "booking_code": "L",
+                                    "seats_remaining": 7
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "fare": {
+                "total_price": "578.65",
+                "price_per_adult": {
+                    "total_fare": "578.65",
+                    "tax": "235.65"
+                },
+                "restrictions": {
+                    "refundable": true,
+                    "change_penalties": true
+                }
+            }
+        },
+        {
+            "itineraries": [
+                {
+                    "outbound": {
+                        "flights": [
+                            {
+                                "departs_at": "2016-06-25T22:50",
+                                "arrives_at": "2016-06-26T19:35",
+                                "origin": {
+                                    "airport": "LHR",
+                                    "terminal": "4"
+                                },
+                                "destination": {
+                                    "airport": "MNL",
+                                    "terminal": "2"
+                                },
+                                "marketing_airline": "PR",
+                                "operating_airline": "PR",
+                                "flight_number": "721",
+                                "aircraft": "343",
+                                "booking_info": {
+                                    "travel_class": "ECONOMY",
+                                    "booking_code": "X",
+                                    "seats_remaining": 7
+                                }
+                            },
+                            {
+                                "departs_at": "2016-06-27T12:00",
+                                "arrives_at": "2016-06-27T22:25",
+                                "origin": {
+                                    "airport": "MNL",
+                                    "terminal": "2"
+                                },
+                                "destination": {
+                                    "airport": "SYD",
+                                    "terminal": "1"
+                                },
+                                "marketing_airline": "PR",
+                                "operating_airline": "PR",
+                                "flight_number": "213",
+                                "aircraft": "343",
+                                "booking_info": {
+                                    "travel_class": "ECONOMY",
+                                    "booking_code": "X",
+                                    "seats_remaining": 7
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "fare": {
+                "total_price": "606.15",
+                "price_per_adult": {
+                    "total_fare": "606.15",
+                    "tax": "179.15"
+                },
+                "restrictions": {
+                    "refundable": true,
+                    "change_penalties": true
+                }
+            }
+        },
+        {
+            "itineraries": [
+                {
+                    "outbound": {
+                        "flights": [
+                            {
+                                "departs_at": "2016-06-25T09:35",
+                                "arrives_at": "2016-06-25T20:10",
+                                "origin": {
+                                    "airport": "LHR",
+                                    "terminal": "4"
+                                },
+                                "destination": {
+                                    "airport": "AUH",
+                                    "terminal": "3"
+                                },
+                                "marketing_airline": "VA",
+                                "operating_airline": "EY",
+                                "flight_number": "7012",
+                                "aircraft": "380",
+                                "booking_info": {
+                                    "travel_class": "ECONOMY",
+                                    "booking_code": "V",
+                                    "seats_remaining": 6
+                                }
+                            },
+                            {
+                                "departs_at": "2016-06-25T21:55",
+                                "arrives_at": "2016-06-26T17:55",
+                                "origin": {
+                                    "airport": "AUH",
+                                    "terminal": "3"
+                                },
+                                "destination": {
+                                    "airport": "SYD",
+                                    "terminal": "1"
+                                },
+                                "marketing_airline": "VA",
+                                "operating_airline": "EY",
+                                "flight_number": "7092",
+                                "aircraft": "380",
+                                "booking_info": {
+                                    "travel_class": "ECONOMY",
+                                    "booking_code": "V",
+                                    "seats_remaining": 6
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "fare": {
+                "total_price": "618.65",
+                "price_per_adult": {
+                    "total_fare": "618.65",
+                    "tax": "135.65"
+                },
+                "restrictions": {
+                    "refundable": false,
+                    "change_penalties": true
+                }
+            }
+        },
+        {
+            "itineraries": [
+                {
+                    "outbound": {
+                        "flights": [
+                            {
+                                "departs_at": "2016-06-25T09:35",
+                                "arrives_at": "2016-06-25T20:10",
+                                "origin": {
+                                    "airport": "LHR",
+                                    "terminal": "4"
+                                },
+                                "destination": {
+                                    "airport": "AUH",
+                                    "terminal": "3"
+                                },
+                                "marketing_airline": "EY",
+                                "operating_airline": "EY",
+                                "flight_number": "12",
+                                "aircraft": "388",
+                                "booking_info": {
+                                    "travel_class": "ECONOMY",
+                                    "booking_code": "V",
+                                    "seats_remaining": 7
+                                }
+                            },
+                            {
+                                "departs_at": "2016-06-25T21:55",
+                                "arrives_at": "2016-06-26T17:55",
+                                "origin": {
+                                    "airport": "AUH",
+                                    "terminal": "3"
+                                },
+                                "destination": {
+                                    "airport": "SYD",
+                                    "terminal": "1"
+                                },
+                                "marketing_airline": "EY",
+                                "operating_airline": "EY",
+                                "flight_number": "454",
+                                "aircraft": "388",
+                                "booking_info": {
+                                    "travel_class": "ECONOMY",
+                                    "booking_code": "V",
+                                    "seats_remaining": 7
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "fare": {
+                "total_price": "619.65",
+                "price_per_adult": {
+                    "total_fare": "619.65",
+                    "tax": "135.65"
+                },
+                "restrictions": {
+                    "refundable": true,
+                    "change_penalties": true
+                }
+            }
+        },
+        {
+            "itineraries": [
+                {
+                    "outbound": {
+                        "flights": [
+                            {
+                                "departs_at": "2016-06-25T21:30",
+                                "arrives_at": "2016-06-26T07:30",
+                                "origin": {
+                                    "airport": "LHR",
+                                    "terminal": "3"
+                                },
+                                "destination": {
+                                    "airport": "DXB"
+                                },
+                                "marketing_airline": "QF",
+                                "operating_airline": "QF",
+                                "flight_number": "2",
+                                "aircraft": "388",
+                                "booking_info": {
+                                    "travel_class": "ECONOMY",
+                                    "booking_code": "K",
+                                    "seats_remaining": 9
+                                }
+                            },
+                            {
+                                "departs_at": "2016-06-26T09:15",
+                                "arrives_at": "2016-06-27T05:10",
+                                "origin": {
+                                    "airport": "DXB"
+                                },
+                                "destination": {
+                                    "airport": "SYD",
+                                    "terminal": "1"
+                                },
+                                "marketing_airline": "QF",
+                                "operating_airline": "QF",
+                                "flight_number": "2",
+                                "aircraft": "388",
+                                "booking_info": {
+                                    "travel_class": "ECONOMY",
+                                    "booking_code": "K",
+                                    "seats_remaining": 9
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "fare": {
+                "total_price": "848.85",
+                "price_per_adult": {
+                    "total_fare": "848.85",
+                    "tax": "311.85"
+                },
+                "restrictions": {
+                    "refundable": true,
+                    "change_penalties": true
+                }
+            }
+        }
+    ]
+}
