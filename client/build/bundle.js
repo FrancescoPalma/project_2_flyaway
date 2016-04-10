@@ -44,47 +44,46 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(module) {var SearchFormView = __webpack_require__(2);
-	var test = new SearchFormView;
-	module.hot.accept();
-	__webpack_require__(3);
-	
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+	var getAccomodation = __webpack_require__(1).getAccomodation;
+	window.onload = function() {
+	  console.log("Hello from app.js");
+	  console.log("calling the accomodation API");
+	  getAccomodation();
+	}
+
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	module.exports = function(module) {
-		if(!module.webpackPolyfill) {
-			module.deprecate = function() {};
-			module.paths = [];
-			// module.parent = undefined by default
-			module.children = [];
-			module.webpackPolyfill = 1;
-		}
-		return module;
-	}
-
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	function Test() {
-	  var hello = "Hello!";
-	  this.sayHi = function() {
-	    console.log(hello);
+	
+	function getAccomodation() {
+	  console.log("getFlights called");
+	  var url = "https://zilyo.p.mashape.com/search?isinstantbook=true&nelatitude=22.37&nelongitude=-154.48000000000002&provider=airbnb%2Chousetrip&swlatitude=18.55&swlongitude=-160.52999999999997";
+	
+	  var xhr = new XMLHttpRequest();
+	  xhr.onreadystatechange = function() {
+	    if (xhr.readyState == XMLHttpRequest.DONE) {
+	      var jsonString = xhr.responseText;
+	      var data = JSON.parse(jsonString);
+	      console.log(data.result);
+	    }
 	  }
+	  xhr.open("GET", url);
+	  xhr.setRequestHeader("X-Mashape-Key", "qM9ApJg7jWmshX5ZkYcjawEa1uBbp1YQTqujsnSsZplpTWDp0F");
+	  xhr.setRequestHeader("Accept", "application/json");
+	  xhr.send(null);
 	}
-	module.exports = Test;
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-
+	
+	module.exports = {
+	  getAccomodation: getAccomodation
+	}
+	  // unirest.get("https://zilyo.p.mashape.com/search?isinstantbook=true&nelatitude=22.37&nelongitude=-154.48000000000002&provider=airbnb%2Chousetrip&swlatitude=18.55&swlongitude=-160.52999999999997")
+	  // .header("X-Mashape-Key", "qM9ApJg7jWmshX5ZkYcjawEa1uBbp1YQTqujsnSsZplpTWDp0F")
+	  // .header("Accept", "application/json")
+	  // .end(function (result) {
+	  //   console.log(result.status, result.headers, result.body);
+	  // });
 
 /***/ }
 /******/ ]);

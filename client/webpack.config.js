@@ -10,6 +10,14 @@ config = {
     watch: true,
     hot: true,
   },
+  module: {
+    loaders: [
+      { test: /\.json$/, loader: "json-loader" }
+    ]
+  },
+  resolveLoader: {
+    packageMains: ['json-loader']
+  },
   devtool: "source-map",
 }
 
