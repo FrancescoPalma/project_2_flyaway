@@ -67,7 +67,7 @@
 	  }
 	
 	  $(document).ready(function() {
-	    console.log("hello from jquery");
+	
 	  })
 	
 	  // var getStartedButton = document.getElementById('getStarted');
