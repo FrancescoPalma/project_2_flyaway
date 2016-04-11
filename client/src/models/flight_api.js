@@ -1,15 +1,14 @@
 var pick = require('lodash/pick');
-function getFlightData() {
+function getFlightData(origin, destination, departureDate) {
   console.log("getFlights called");
-  var url = 'https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=bX8HkNGmgrYd81Z9ne6OyMp4WhAiYoyS&origin=LON&destination=SYD&departure_date=2016-06-25&currency=GBP&number_of_results=5';
-
+  var url = "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=bX8HkNGmgrYd81Z9ne6OyMp4WhAiYoyS&origin=" + origin + "&destination=" + destination + "&departure_date=" + departureDate + "&currency=GBP&number_of_results=5";
+  // 2016-06-25
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState == XMLHttpRequest.DONE) {
       var jsonString = xhr.responseText;
       var data = JSON.parse(jsonString);
-      console.log("Data is ready to be processed. Sending it now...");
-      breakBigObject(data);
+      console.log("Data is ready.");
     }
   }
   xhr.open("GET", url);
