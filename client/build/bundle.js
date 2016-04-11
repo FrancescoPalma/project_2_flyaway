@@ -66,6 +66,10 @@
 	    console.log(getFlightData(origin.value, destination.value, departureDate.value));
 	  }
 	
+	  $(document).ready(function() {
+	    console.log("hello from jquery");
+	  })
+	
 	  // var getStartedButton = document.getElementById('getStarted');
 	  // getStartedButton.onclick = function() {
 	  //   var overlay = document.getElementById('overlay');
@@ -123,18 +127,12 @@
 	    if (xhr.readyState == XMLHttpRequest.DONE) {
 	      var jsonString = xhr.responseText;
 	      var data = JSON.parse(jsonString);
-	      console.log("Data is ready to be processed. Sending it now...");
-	      chainMethods(data);
+	      console.log("Data is ready.");
 	    }
 	  }
 	  xhr.open("GET", url);
 	  console.log("I'm calling the FlightsAPI");
 	  xhr.send(null);
-	}
-	
-	function chainMethods(data) {
-	  var flights = breakBigObject(data);
-	  console.log(getFlightPrice(flights, 0));
 	}
 	
 	function breakBigObject(data) {

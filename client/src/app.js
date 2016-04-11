@@ -20,6 +20,10 @@ window.onload = function() {
     console.log(getFlightData(origin.value, destination.value, departureDate.value));
   }
 
+  $(document).ready(function() {
+
+  })
+
   // var getStartedButton = document.getElementById('getStarted');
   // getStartedButton.onclick = function() {
   //   var overlay = document.getElementById('overlay');
