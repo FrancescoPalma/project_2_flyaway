@@ -72,6 +72,7 @@ body {
 }
 
 .bg-container {
+  position: relative;
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -113,26 +114,31 @@ body {
   margin-top: 150px;
 }
 
-#overlay button { 
+#overlay button {
   display: block;
   width: 30%;
   padding: .4rem;
-  border: none; 
-  margin: 1rem auto; 
+  border: none;
+  margin: 1rem auto;
   font-size: 1.3rem;
   background: rgba(255,255,255,0.23);
   color: #ebebeb;
-  border-radius: 3px; 
+  border-radius: 3px;
   cursor: pointer;
   transition: .3s background;
   float: center;
 }
 
-#overlay button:hover { 
+#overlay button:hover {
   background: #82cafa;
 }
 
-#form {
+.container {
+  position: relative;
+}
+
+#destinationForm {
+  position: absolute;
   margin: auto;
   padding: 30px 0;
   background: #82cafa;
@@ -146,7 +152,7 @@ body {
   text-align: center;
 }
 
-#form h1 {
+#destinationForm h1 {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   font-weight: 100;
   font-size: 1.5rem;
@@ -157,7 +163,7 @@ body {
   margin: 50px auto;
   width: 400px;
   height: 50px;
-  position: relative;
+  position: absolute;
 }
 
 .holder input {

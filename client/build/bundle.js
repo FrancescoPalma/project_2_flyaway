@@ -49,10 +49,53 @@
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(2);
+	__webpack_require__(6);
+	__webpack_require__(8);
+	__webpack_require__(10);
+	window.onload = function() {
+	  getStartedButton = document.getElementById('getStarted');
+	  getStartedButton.onclick = function() {
+	    var overlay = document.getElementById('overlay');
+	    overlay.className += 'animated fadeOutLeft';
+	    var destinationForm = document.getElementById('destinationForm');
+	    setTimeout(function(){
+	      destinationForm.style = 'position: absolute; z-index: 10;';
+	      destinationForm.className = 'animated fadeInRight';
+	    }, 3000);
+	  }
+	}
+
+/***/ },
+/* 2 */
 /***/ function(module, exports) {
 
-	
+	// removed by extract-text-webpack-plugin
 
+/***/ },
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 7 */,
+/* 8 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 9 */,
+/* 10 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
