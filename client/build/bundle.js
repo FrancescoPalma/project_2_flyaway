@@ -44,11 +44,21 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getAccomodation = __webpack_require__(1).getAccomodation;
+	__webpack_require__(1);
+	__webpack_require__(5);
+	__webpack_require__(7);
+	__webpack_require__(9);
 	window.onload = function() {
-	  console.log("Hello from app.js");
-	  console.log("calling the accomodation API");
-	  getAccomodation();
+	  getStartedButton = document.getElementById('getStarted');
+	  getStartedButton.onclick = function() {
+	    var overlay = document.getElementById('overlay');
+	    overlay.className += 'animated fadeOutLeft';
+	    var destinationForm = document.getElementById('destinationForm');
+	    setTimeout(function(){
+	      destinationForm.style = 'position: absolute; z-index: 10;';
+	      destinationForm.className = 'animated fadeInRight';
+	    }, 3000);
+	  }
 	}
 
 
@@ -56,34 +66,30 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	
-	function getAccomodation() {
-	  console.log("getFlights called");
-	  var url = "https://zilyo.p.mashape.com/search?isinstantbook=true&nelatitude=22.37&nelongitude=-154.48000000000002&provider=airbnb%2Chousetrip&swlatitude=18.55&swlongitude=-160.52999999999997";
-	
-	  var xhr = new XMLHttpRequest();
-	  xhr.onreadystatechange = function() {
-	    if (xhr.readyState == XMLHttpRequest.DONE) {
-	      var jsonString = xhr.responseText;
-	      var data = JSON.parse(jsonString);
-	      console.log(data.result);
-	    }
-	  }
-	  xhr.open("GET", url);
-	  xhr.setRequestHeader("X-Mashape-Key", "qM9ApJg7jWmshX5ZkYcjawEa1uBbp1YQTqujsnSsZplpTWDp0F");
-	  xhr.setRequestHeader("Accept", "application/json");
-	  xhr.send(null);
-	}
-	
-	module.exports = {
-	  getAccomodation: getAccomodation
-	}
-	  // unirest.get("https://zilyo.p.mashape.com/search?isinstantbook=true&nelatitude=22.37&nelongitude=-154.48000000000002&provider=airbnb%2Chousetrip&swlatitude=18.55&swlongitude=-160.52999999999997")
-	  // .header("X-Mashape-Key", "qM9ApJg7jWmshX5ZkYcjawEa1uBbp1YQTqujsnSsZplpTWDp0F")
-	  // .header("Accept", "application/json")
-	  // .end(function (result) {
-	  //   console.log(result.status, result.headers, result.body);
-	  // });
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 6 */,
+/* 7 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 8 */,
+/* 9 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

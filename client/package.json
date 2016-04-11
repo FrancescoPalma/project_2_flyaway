@@ -23,6 +23,11 @@
   "dependencies": {
     "json-loader": "^0.5.4",
     "lodash": "^4.9.0",
-    "unirest": "^0.4.2"
+    "unirest": "^0.4.2",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.2.0",
+    "style": "0.0.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.14"
   }
 }
