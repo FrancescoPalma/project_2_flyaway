@@ -1,7 +1,7 @@
 require('./stylesheets/animate.css');
+require('./stylesheets/skeleton.css');
 require('./stylesheets/main.sass');
 require('./stylesheets/style.css');
-require('./stylesheets/skeleton.css');
 window.onload = function() {
   getStartedButton = document.getElementById('getStarted');
   getStartedButton.onclick = function() {
@@ -9,8 +9,8 @@ window.onload = function() {
     overlay.className += 'animated fadeOutLeft';
     var destinationForm = document.getElementById('destinationForm');
     setTimeout(function(){
-      destinationForm.style = 'position: absolute; z-index: 10;';
+      destinationForm.style = 'position: absolute;';
       destinationForm.className = 'animated fadeInRight';
-    }, 3000);
+    }, 1000);
   }
 }

@@ -55,9 +55,9 @@
 	    overlay.className += 'animated fadeOutLeft';
 	    var destinationForm = document.getElementById('destinationForm');
 	    setTimeout(function(){
-	      destinationForm.style = 'position: absolute; z-index: 10;';
+	      destinationForm.style = 'position: absolute;';
 	      destinationForm.className = 'animated fadeInRight';
-	    }, 3000);
+	    }, 1000);
 	  }
 	}
 

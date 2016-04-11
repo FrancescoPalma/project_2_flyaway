@@ -5,17 +5,13 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
   <script src="bundle.js"></script>
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="nav-bar">
-      <h1 class="header-title">FLYAWAY</h1>
-      <img class="logo" src="./assets/logo.png">
-    </div>
-  </header>
+  <header><p>FLYAWAY</p></header>
+
   <div class="main-div">
     <div class="bg-container">
       <video id="video" class="content" autoplay loop>
@@ -23,25 +19,24 @@
         <source src="./assets/sun.oggtheora.ogv" type="video/ogg">
         <source src="./assets/sun.webmhd.webm" type="video/webm">
       </video>
-      <div class="container" style="position: absolute;">
-        <div id="destinationForm" style="display: none;">
-          <h1>Where do you want to go?</h1>
-          <div class="holder">
-            <input type="text" required>
-            <span>We accept any place on Earth :)</span>
-            <div class="line"></div>
-            <div class="line blue"></div>
-            <div class="line blue"></div>
-          </div>
-          <div class="holder">
-            <button type="button" id="btnAddForm" class="btn">NEXT</button>
+      <div id="overlay">
+        <h3>Fly with us towards your Dreams</h3>
+        <button id="getStarted">Start your Journey</button>
+        <div class="form-container" style="position: absolute;">
+          <div id="destinationForm" style="display: none;">
+            <h1>Where do you want to go?</h1>
+            <div class="holder">
+              <input type="text" required>
+              <span>We accept any place on Earth :)</span>
+              <div class="line"></div>
+              <div class="line blue"></div>
+              <div class="line blue"></div>
+            </div>
+            <div class="holder">
+              <button type="button" class="btn">NEXT</button>
+            </div>
           </div>
         </div>
-        <div id="overlay">
-          <h3>Fly with us towards your Dreams</h3>
-          <button id="getStarted">Start your journey</button>
-        </div>
-      </div>
       </div>
     </div>
   </div>
