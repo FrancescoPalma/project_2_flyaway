@@ -137,7 +137,7 @@ body {
   position: relative;
 }
 
-#destinationForm {
+#searchForm {
   position: absolute;
   margin: auto;
   padding: 30px 0;
@@ -152,11 +152,18 @@ body {
   text-align: center;
 }
 
-#destinationForm h1 {
+#searchForm {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   font-weight: 100;
-  font-size: 1.5rem;
+  font-size: 4.5rem;
   color: #fff;
+  margin: 50px;
+  width: auto;
+  height:auto;
+}
+
+.searchBoxdp {
+  width: 10px;
 }
 
 .holder {
