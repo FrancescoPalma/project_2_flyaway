@@ -49,7 +49,22 @@
 	__webpack_require__(7);
 	__webpack_require__(9);
 	window.onload = function() {
-	  getStartedButton = document.getElementById('getStarted');
+	  var searchField = document.getElementById('searchBox');
+	  var searchForm = document.getElementById('searchForm');
+	  console.log( searchField );
+	
+	  searchForm.onsubmit = function(event) {
+	    console.log(searchForm);
+	    event.preventDefault();
+	    console.log(document.querySelector('.searchBoxdp').value);
+	    console.log(document.querySelector('.searchBoxds').value);
+	    console.log(document.querySelector('.numpeople').value);
+	    console.log(document.querySelector('.first-date').value);
+	    console.log(document.querySelector('.second-date').value);
+	  }
+	
+	
+	  var getStartedButton = document.getElementById('getStarted');
 	  getStartedButton.onclick = function() {
 	    var overlay = document.getElementById('overlay');
 	    overlay.className += 'animated fadeOutLeft';

@@ -24,10 +24,25 @@
         <source src="./assets/sun.webmhd.webm" type="video/webm">
       </video>
       <div class="container" style="position: absolute;">
-        <div id="destinationForm" style="display: none;">
+        <div id="destinationForm" style="">
           <h1>Where do you want to go?</h1>
           <div class="holder">
-            <input type="text" required>
+            <form id="searchForm">
+              <input class="searchBoxdp" type="text" placeholder="Departing">
+              <input class="searchBoxds" type="text" placeholder="Destination">
+              <select class="numpeople" name="people">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <input class="first-date" type="date">
+              <input class="second-date" type="date">
+              <input type="submit">
+            </form>
+            
             <span>We accept any place on Earth :)</span>
             <div class="line"></div>
             <div class="line blue"></div>
@@ -37,10 +52,10 @@
             <button type="button" id="btnAddForm" class="btn">NEXT</button>
           </div>
         </div>
-        <div id="overlay">
+<!--         <div id="overlay">
           <h3>Fly with us towards your Dreams</h3>
           <button id="getStarted">Start your journey</button>
-        </div>
+        </div> -->
       </div>
       </div>
     </div>
