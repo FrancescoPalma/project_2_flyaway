@@ -2,7 +2,10 @@ require('./stylesheets/animate.css');
 require('./stylesheets/main.sass');
 require('./stylesheets/style.css');
 require('./stylesheets/skeleton.css');
+var getFlightData = require('./models/flight_api').getFlightData;
+var getFlickrImagesByTag = require('./models/flickr_api').getFlickrImagesByTag;
 window.onload = function() {
+  console.log(getFlickrImagesByTag());
   getStartedButton = document.getElementById('getStarted');
   getStartedButton.onclick = function() {
     var overlay = document.getElementById('overlay');

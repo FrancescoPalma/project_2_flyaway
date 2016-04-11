@@ -1,4 +1,3 @@
-var pick = require('lodash/pick');
 function getFlightData() {
   console.log("getFlights called");
   var url = 'https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=bX8HkNGmgrYd81Z9ne6OyMp4WhAiYoyS&origin=LON&destination=SYD&departure_date=2016-06-25&currency=GBP&number_of_results=5';

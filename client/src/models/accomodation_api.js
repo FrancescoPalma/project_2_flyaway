@@ -21,9 +21,3 @@ function getAccomodation() {
 module.exports = {
   getAccomodation: getAccomodation
 }
-  // unirest.get("https://zilyo.p.mashape.com/search?isinstantbook=true&nelatitude=22.37&nelongitude=-154.48000000000002&provider=airbnb%2Chousetrip&swlatitude=18.55&swlongitude=-160.52999999999997")
-  // .header("X-Mashape-Key", "qM9ApJg7jWmshX5ZkYcjawEa1uBbp1YQTqujsnSsZplpTWDp0F")
-  // .header("Accept", "application/json")
-  // .end(function (result) {
-  //   console.log(result.status, result.headers, result.body);
-  // });
