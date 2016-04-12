@@ -50,19 +50,30 @@
 	__webpack_require__(9);
 	var getFlightData = __webpack_require__(11).getFlightData;
 	var getFlickrImagesByTag = __webpack_require__(12).getFlickrImagesByTag;
-	window.onload = function() {
-	  console.log(getFlickrImagesByTag());
-	  getStartedButton = document.getElementById('getStarted');
-	  getStartedButton.onclick = function() {
-	    var overlay = document.getElementById('overlay');
-	    overlay.className += 'animated fadeOutLeft';
-	    var destinationForm = document.getElementById('destinationForm');
-	    setTimeout(function(){
-	      destinationForm.style = 'position: absolute; z-index: 10;';
-	      destinationForm.className = 'animated fadeInRight';
-	    }, 3000);
-	  }
-	}
+	var getFlightData = __webpack_require__(11).getFlightData;
+	var getOutboundFlights = __webpack_require__(11).getOutboundFlights;
+	var getFlightPrice = __webpack_require__(11).getFlightPrice;
+	
+	$(document).ready(function() {
+	  function showElement(id) { $(id).show(); }
+	  function hidePage() { $('.page').hide(); }
+	
+	  hidePage();
+	  showElement('#home');
+	
+	  $('#get-started').click(function(e) {
+	    e.preventDefault();
+	    hidePage();
+	    showElement('#where-to-go');
+	  })
+	
+	  $('#destination-button').click(function(e) {
+	    e.preventDefault();
+	    hidePage();
+	    showElement('#home');
+	  })
+	
+	})
 
 
 /***/ },
@@ -157,13 +168,26 @@
 	    text: "red+panda"
 	  }, function(err, result) {
 	    if(err) { throw new Error(err); }
-	    console.log(result);
+	    return result;
 	  })
 	}
 	
+	function getImagesUrl(data) {
+	  var urls = [];
+	  for(var photo of data.photos.photo) {
+	    var id = photo.id;
+	    var farmId = photo.farm;
+	    var serverId = photo.server;
+	    var secret = photo.secret;
+	    urls.push("https://farm" + farmId + "{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg")
+	  }
+	}
 	module.exports = {
 	  getFlickrImagesByTag: getFlickrImagesByTag
 	}
+	
+	// https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+
 
 /***/ },
 /* 13 */

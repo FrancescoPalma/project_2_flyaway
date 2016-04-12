@@ -4,16 +4,27 @@ require('./stylesheets/style.css');
 require('./stylesheets/skeleton.css');
 var getFlightData = require('./models/flight_api').getFlightData;
 var getFlickrImagesByTag = require('./models/flickr_api').getFlickrImagesByTag;
-window.onload = function() {
-  console.log(getFlickrImagesByTag());
-  getStartedButton = document.getElementById('getStarted');
-  getStartedButton.onclick = function() {
-    var overlay = document.getElementById('overlay');
-    overlay.className += 'animated fadeOutLeft';
-    var destinationForm = document.getElementById('destinationForm');
-    setTimeout(function(){
-      destinationForm.style = 'position: absolute; z-index: 10;';
-      destinationForm.className = 'animated fadeInRight';
-    }, 3000);
-  }
-}
+var getFlightData = require('./models/flight_api').getFlightData;
+var getOutboundFlights = require('./models/flight_api').getOutboundFlights;
+var getFlightPrice = require('./models/flight_api').getFlightPrice;
+
+$(document).ready(function() {
+  function showElement(id) { $(id).show(); }
+  function hidePage() { $('.page').hide(); }
+
+  hidePage();
+  showElement('#home');
+
+  $('#get-started').click(function(e) {
+    e.preventDefault();
+    hidePage();
+    showElement('#where-to-go');
+  })
+
+  $('#destination-button').click(function(e) {
+    e.preventDefault();
+    hidePage();
+    showElement('#home');
+  })
+
+})
