@@ -482,7 +482,7 @@ header {
 .modalbox.success button:focus:hover
 {
   color: #fff;
-  background: #0a6;
+  background: green;
   border-color: transparent;
 }
 .icon #tick{
