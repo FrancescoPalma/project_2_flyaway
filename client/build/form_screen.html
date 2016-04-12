@@ -22,23 +22,17 @@
       </div>
     </header>
 
-    <div id='video'>
-      <video autoplay loop>
-        <source src="./assets/sun.mp4" type="video/mp4">
-        <source src="./assets/sun.oggtheora.ogv" type="video/ogg">
-        <source src="./assets/sun.webmhd.webm" type="video/webm">
-      </video>
-    </div>
+    <div id='form'>
 
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns">
-          <div id="overlay">
-            <h3>Fly with us towards your Dreams</h3>
-            <button id="getStarted">Start your Journey</button>
-          </div>
-        </div>
-      </div>
+      <form method="get" accept-charset="utf-8">
+        <input id="search-box-origin" type="text" placeholder="Origin"></input>
+        <input id="search-box-destination" type="text" placeholder="Destination"></input>
+        <input id="departure-date" type="date" class="icon"></input>
+        <input type="date" class="icon"></input>
+      </form>
+
+      <button id='details-button'>NEXT</button>
+
     </div>
 
   </div>
