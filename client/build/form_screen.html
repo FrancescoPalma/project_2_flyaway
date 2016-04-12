@@ -22,17 +22,19 @@
       </div>
     </header>
 
-    <div id='form'>
+    <div class="form">
 
-      <form method="get" accept-charset="utf-8">
-        <input id="search-box-origin" type="text" placeholder="Origin"></input>
-        <input id="search-box-destination" type="text" placeholder="Destination"></input>
-        <input id="departure-date" type="date" class="icon"></input>
-        <input type="date" class="icon"></input>
+      <h2 class="form-header">
+        Your Flight
+        <img src="./assets/plane.ico">
+      </h2>
+
+      <form id="flight-form" method="get" accept-charset="utf-8">
+        <p><input id="search-box-origin" type="text" placeholder="Origin"></input></p>
+        <p><input id="departure-date" type="date" placeholder="DepartureDate"></input></p>
+        <p><input type="date" placeholder="ArrivalDate"></input></p>     
+        <button id="details-button">Next</button>
       </form>
-
-      <button id='details-button'>NEXT</button>
-
     </div>
 
   </div>
