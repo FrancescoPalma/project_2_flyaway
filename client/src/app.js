@@ -2,7 +2,7 @@ require('./stylesheets/animate.css');
 require('./stylesheets/main.sass');
 require('./stylesheets/style.css');
 require('./stylesheets/skeleton.css');
-var async = require("async");
+
 var changeBg = require('./helpers/slider.js');
 var getFlickrImagesByTag = require('./models/flickr_api').getFlickrImagesByTag;
 var getFlightData = require('./models/flight_api').getFlightData;
@@ -27,11 +27,7 @@ $(document).ready(function() {
     $('#video').hide();
     getFlickrImagesByTag($('#destination-input').val(), changeBg);
     $('#slider').show();
+    hidePage();
+    showElement('#trip-details');
   });
-
-    // getFlickrImagesByTag($('#destination-input').value);
-    // $('#video').hide();
-    // changeBg(imagesArray);
-    // $('#slider').show();
-    // showElement('#home');
 })

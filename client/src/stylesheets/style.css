@@ -6,6 +6,12 @@ html, body, #page {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 
+.temp-card {
+  height: 300px;
+  width: 200px;
+  background-color: white;
+}
+
 .background-slider {
   position: absolute;
   top:0;
@@ -104,15 +110,15 @@ header {
   font-weight: 100;
   text-align: center;
   letter-spacing: 0.05rem;
-  color: #black;
+  color: black;
   opacity: 0.9;
 }
 
 .form-header img {
-  height: 5rem; 
-  width: 5rem; 
-  background-color: white; 
-  display: block; 
+  height: 5rem;
+  width: 5rem;
+  background-color: white;
+  display: block;
   margin: 0 auto;
 }
 
@@ -147,20 +153,6 @@ header {
 .form #search-box-origin {
   height: 4.65rem;
 }
-
-#details-button {
-  border: none;
-  font-size: 1.3rem;
-  background: rgba(255,255,255,0.23);
-  color: #000;
-  border-radius: 1.5rem;
-  transition: .3s background;
-}
-
-#details-button:hover {
-  background: #000;
-  color: #fff;
-} 
 /*END FORM STYLE*/
 
 /*ACCOMMODATION STYLE*/
@@ -209,10 +201,10 @@ header {
 }
 
 .description img {
-  height: 5rem; 
-  width: 5rem; 
-  background-color: white; 
-  display: block; 
+  height: 5rem;
+  width: 5rem;
+  background-color: white;
+  display: block;
   margin: 0 auto;
 }
 
@@ -222,18 +214,6 @@ header {
   width: 500px;
 }
 
-#button {
-  border: none;
-  font-size: 1.3rem;
-  background: rgba(255,255,255,0.23);
-  color: #000;
-  transition: .3s background;
-}
-
-#button:hover {
-  background: #000;
-  color: #fff;
-}
 /*END ACCOMMODATION STYLE*/
 
 
@@ -249,5 +229,5 @@ footer {
 footer p {
   text-align: center;
   font-size: 1.3rem;
-  color: #fff; 
+  color: #fff;
 }

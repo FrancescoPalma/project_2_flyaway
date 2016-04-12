@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato:100, 400,700' rel='stylesheet' type='text/css'>
-  <script src="bundle.js"></script>
 </head>
 <body>
 
@@ -43,12 +42,7 @@
       </div>
     </div>
 
-    <div class="form">
-
-      <h2 class="form-header">
-        Your Flight
-        <img src="./assets/plane.ico">
-      </h2>
+  </div>
 
   <div id="where-to-go" class="page">
     <div class="container">
@@ -64,42 +58,34 @@
     </div>
   </div>
 
-      <form id="flight-form" method="get" accept-charset="utf-8">
-        <p><input id="search-box-origin" type="text" placeholder="Origin"></input></p>
-        <p><input id="search-box-destination" type="text" placeholder="Destination"></input></p>
-        <p><input id="departure-date" type="date" placeholder="DepartureDate"></input></p>
-        <p><input id="arrival-date" type="date" placeholder="ArrivalDate"></input></p>
-        <button id="details-button">Next</button>
-      </form>
-    </div>
-
-    <div class="accommodation-container">
-
-      <div class="card">
-        <div class="content">
-          <div class="description">
-            <h3>Your Accommodation</h3>
-            <img src="./assets/accommodation.png">
-            <p>
-              Descripition from Accommodation API goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate nisi eget lectus hendrerit, facilisis tincidunt mi vehicula. Nullam non odio ultrices, luctus est vitae, suscipit felis. Ut tempor, augue vitae accumsan venenatis, arcu sem posuere lorem, a sodales massa erat eu purus. Nulla sed luctus ex, vel condimentum ligula. Phasellus tristique fringilla neque, at mollis tortor dignissim sed.
-            </p>
-            <button id="button">Book Now</button>
-          </div>
-          <div class="card-bg-image">
-            <img src="./assets/accommodation-example.jpg">
+  <div id="trip-details" class="page">
+    <div class="container">
+      <div class="row">
+        <div class="twelve colums">
+          <div class="form">
+            <h2 class="form-header">
+              Your Flight
+              <img src="./assets/plane.ico">
+            </h2>
+            <form id="flight-form" method="get" accept-charset="utf-8">
+              <p><input id="search-box-origin" type="text" placeholder="Origin"></input></p>
+              <p><input id="search-box-destination" type="text" placeholder="Destination"></input></p>
+              <p><input id="departure-date" type="date" placeholder="DepartureDate"></input></p>
+              <p><input id="arrival-date" type="date" placeholder="ArrivalDate"></input></p>
+              <button id="trip-details" class="nice-button">Next</button>
+            </form>
           </div>
         </div>
       </div>
-
     </div>
-
   </div>
+
 
   <footer>
     <p>2016 - © All Rights Reserved - Designed & Developed by <b style="color:#82cafa ">Team Mercury</b></p>
   </footer>
 
-<script src="https://code.jquery.com/jquery-2.2.3.min.js" type="text/javascript"></script>
-<script src="bundle.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" type="text/javascript"></script>
+  <script src="bundle.js"></script>
 </body>
 </html>
