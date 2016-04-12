@@ -3,26 +3,37 @@ require('./stylesheets/main.sass');
 require('./stylesheets/style.css');
 require('./stylesheets/skeleton.css');
 var getFlightData = require('./models/flight_api').getFlightData;
+var getOutboundFlights = require('./models/flight_api').getOutboundFlights;
+var getFlightPrice = require('./models/flight_api').getFlightPrice;
 
 window.onload = function() {
   console.log("I'm loading");
-  var searchField = document.getElementById('searchBox');
-  var searchForm = document.getElementById('searchForm');
-  var origin = document.querySelector('.searchBoxdp');
-  var destination = document.querySelector('.searchBoxds');
-  // console.log(document.querySelector('.numpeople').value);
-  var departureDate = document.querySelector('.first-date');
-  var returnDate = document.querySelector('.second-date');
 
-  var detailsButtown = document.getElementById('detailsButton');
+  var searchField = document.querySelector('#search-box');
+  var searchForm = document.querySelector('#search-form');
+  var origin = document.querySelector('#search-box-origin');
+  var destination = document.querySelector('#search-box-destination');
+  var departureDate = document.querySelector('#departure-date');
+  var returnDate = document.querySelector('#return-date');
+
+  var departureDateLI = document.getElementById('departure-date');
+  var returnDateLI = document.getElementById('return-date');
+  var pricePerAdult = document.getElementById('price-per-adult');
+  var origin = document.getElementById('origin');
+  var arrival = document.getElementById('arrival');
+
+
+  var detailsButton = document.querySelector('#details-button');
   detailsButton.onclick = function() {
     console.log("Oh, I was clicked.");
     console.log(getFlightData(origin.value, destination.value, departureDate.value));
+    // var apiResult =
+    // var outboundFlights = getOutboundFlights(apiResult, 0);
+    // departureDateLI.innerHTML = outboundFlights.departs_at;
+    // pricePerAdult.innerHTML = getFlightPrice(apiResult, 0);
+    // origin.innerHTML = getOutboundFlights(apiResult, 0).origin.airport;
+    // arrival.innerHTML = getOutboundFlights(apiResult, 1).destination.airport;
   }
-
-  $(document).ready(function() {
-
-  })
 
   // var getStartedButton = document.getElementById('getStarted');
   // getStartedButton.onclick = function() {
