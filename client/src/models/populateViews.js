@@ -21,23 +21,27 @@ var returnNumberStopovers = $("return-number-stovers");
 function populateFlightsView(origin, destination, departureDate, returnDate) {
   var stopoversOnDeparture = false;
   var stopoversOnReturn = false;
-  var departureSearchResults = getFlightData(origin, destination, departureDate);
-  var returnSearchResults = getFlightData(destination, origin, returnDate);
-  var flightDetails = getFlightDetails;
+  // var departureSearchResults = getFlightData(origin, destination, departureDate);
+  // var returnSearchResults = getFlightData(destination, origin, returnDate);
+  // var flightDetails = getFlightDetails;
+  var flightResultsContainer = $('.flight-results-container');
+  var card = document.createElement('section');
+  card.className = 'temp-card';
+  card.innerHTML = '<div id="origin-cityname"></div><div id="destination-cityname"></div><div id="oneway-origin-iata"></div><div id="oneway-destination-iata"></div><div id="return-origin-iata"></div><div id="return-destination-iata"></div><div id="total-price"></div><div id="oneway-flight-duration"></div><div id="return-flight-duration"></div><div id="oneway-flight-price"></div><div id="return-flight-price"></div><div id="oneway-number-stopovers"></div><div id="return-number-stopovers"></div>'
 
-  //are there stopovers?
-  if (departureSearchResults.results[0].itineraries.length > 1) {
-    stopoversOnDeparture = true;
-  }
+  flightResultsContainer.append(card);
+  // document.body.appendChild(card);
 
-  if (returnSearchResults.results[0].itineraries.length > 1) {
-    stopoversOnReturn = true;
-  }
 
   // originCityName.innerHTML = IATAAPI reverse lookup
   // destinationCityName.innerHTML = IATAAPI reverse lookup
-  onewayOriginIATA.innerHTML = getOriginIata(departureSearchResults, index);
-  onewayDestinationIATA.innerHTML = getDestinationIata(departureSearchResults, index);
+
+
+}
+
+function writeCardContents(data, index) {
+  // onewayOriginIATA.innerHTML = getOriginIata(departureSearchResults, index);
+  // onewayDestinationIATA.innerHTML = getDestinationIata(departureSearchResults, index);
   returnOriginIATA.innerHTML = getOriginIata(departureSearchResults, index);
   returnDestinationIATA.innerHTML = getDestinationIata(departureSearchResults, index);
   totalPrice.innerHTML = getTotalFlightPrice(departureSearchResults, index) + getTotalFlightPrice(returnSearchResults, index);
@@ -47,7 +51,10 @@ function populateFlightsView(origin, destination, departureDate, returnDate) {
   returnFlightPrice.innerHTML = getFlightPrice(data, index);
   onewayNumberStopovers.innerHTML = getNumberOfStopovers(data, index);
   returnNumberStopovers.innerHTML = getNumberOfStopovers(data, index);
+}
 
+module.exports = {
+  populateFlightsView: populateFlightsView
 }
 
 // for each result
