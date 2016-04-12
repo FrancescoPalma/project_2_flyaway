@@ -9,6 +9,7 @@ var getFlightData = require('./models/flight_api').getFlightData;
 var getOutboundFlights = require('./models/flight_api').getOutboundFlights;
 var getFlightPrice = require('./models/flight_api').getFlightPrice;
 
+<<<<<<< HEAD
 $(document).ready(function() {
   function showElement(id) { $(id).show(); }
   function hidePage() { $('.page').hide(); }
@@ -29,5 +30,6 @@ $(document).ready(function() {
     $('#slider').show();
     hidePage();
     showElement('#trip-details');
+    console.log(getFlightData('SYD', 'LON', '2016-07-28'));
   });
 })

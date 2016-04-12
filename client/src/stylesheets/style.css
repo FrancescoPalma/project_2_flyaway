@@ -5,7 +5,6 @@ html, body, #page {
   overflow-y: scroll;
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
-
 .temp-card {
   height: 300px;
   width: 200px;
@@ -21,6 +20,17 @@ html, body, #page {
   width:100%;
   background-size: cover;
   background-position: center;
+=======
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+>>>>>>> origin/feature/html-results-page
 }
 
 header {
@@ -206,6 +216,19 @@ header {
   background-color: white;
   display: block;
   margin: 0 auto;
+=======
+.btn {
+  width: 25%;
+  margin: auto;
+
+  background: #fff;
+  padding: 20px 0;
+  color: #82cafa;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+>>>>>>> origin/feature/html-results-page
 }
 
 .card-bg-image {
@@ -216,6 +239,252 @@ header {
 
 /*END ACCOMMODATION STYLE*/
 
+/*!!!!!!!!BOX!!!!!!!!!!!!!!!!!!*/
+#boxbody {
+  width: 100%;
+  background: #f0f0f0;
+  height: 100%;
+  padding: 80px 0 100px;
+  font-family: 'Hind';
+
+}
+
+
+#row {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.page-center {
+  max-width: 1140px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-center-short {
+  max-width: 790px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-center div:first-child {
+
+}
+
+.page-center div:last-child {
+
+}
+
+.middle-guy {
+  margin: 0 20px
+}
+
+.standard {
+
+  background: #fff;
+
+}
+
+/*price text*/
+.standard-text {
+  color: #333333;
+}
+
+.standard-border {
+  border: 1px #b0b0b0 solid;
+  border-radius: 2px;
+}
+
+.starter {
+  background: #00a8e1;
+}
+
+.starter-text {
+  color: #00a8e1;
+}
+
+.starter-border {
+  border: 2px #00a8e1 solid;
+  border-radius: 2px;
+}
+
+.highlight {
+  background: #ed1c24;
+}
+
+.highlight-text {
+  color: #ed1c24;
+}
+
+.highlight-border {
+  border: 2px #ed1c24 solid;
+  border-radius: 2px;
+}
+
+.enterprise {
+  background: #414142;
+}
+
+.enterprise-text {
+  color: #333333;
+}
+
+.enterprise-border {
+  border: 2px #414142 solid;
+}
+
+
+.fineprint {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 28px 20px 0;
+  line-height: 1.25em;
+}
+
+
+#pricingCard {
+  position: fixed;
+   top: 30%;
+   left: 20%;
+  display: inline-block;
+  background: #f9f9f9;
+  width: 260px;
+  margin: 0 auto;
+  text-align: center;
+
+  position: relative;
+  opacity: 0.8;
+}
+
+#startPop {
+  position: absolute;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  top: -33px;
+  text-align: center;
+  width: 100%;
+  background: #06c4f7;
+  height: 28px;
+  border: solid #06c4f7 2px;
+  left: -2px;
+  color: #ffffff;
+  line-height: 32px;
+}
+
+#mostPop {
+  position: absolute;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  top: -33px;
+  text-align: center;
+  width: 100%;
+  background: #ff3948;
+  height: 28px;
+  border: solid #ff3948 2px;
+  left: -2px;
+  color: #ffffff;
+  line-height: 32px;
+}
+
+#enterPop {
+  position: absolute;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  top: -33px;
+  text-align: center;
+  width: 100%;
+  background: #545454;
+  height: 28px;
+  border: solid #545454 2px;
+  left: -2px;
+  color: #ffffff;
+  line-height: 32px;
+}
+
+#top {
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1em;
+  padding: 14px 0 10px;
+}
+
+#top span {
+  font-size: 18px;
+  line-height: 1em;
+}
+
+#middle {
+  line-height: 1em;
+  font-size: 44px;
+  font-weight: 300;
+  padding: 22px 0 0;
+}
+
+#middle span {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#copy {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1em;
+  padding: 8px 0 5px
+}
+
+/*button text*/
+#btnOne {
+
+
+  display: inline-block;
+  border-radius: 1.5rem;
+  margin: 0 auto;
+  padding: 6px 30px 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #000;
+  opacity: .9;
+}
+
+#btnOne:hover {
+  cursor: pointer;
+
+}
+
+
+
+#bottom {
+  color: #333333;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2.5em;
+  padding: 20px 0 0;
+}
+
+.location {
+  border-top: 1px #d3d6da solid;
+  line-height: 1em;
+  padding: 8px 0;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.date {
+  border-top: 1px #d3d6da solid;
+  line-height: 1em;
+  padding: 8px 0;
+  text-align: left;
+  padding-left: 20px;
+}
 
 footer {
   position: fixed;
