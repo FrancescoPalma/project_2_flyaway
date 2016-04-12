@@ -9,6 +9,7 @@ var getFlightPrice = require('./models/flight_api').getFlightPrice;
 window.onload = function() {
   console.log("I'm loading");
 
+<<<<<<< HEAD
   var searchField = document.querySelector('#search-box');
   var searchForm = document.querySelector('#search-form');
   var origin = document.querySelector('#search-box-origin');
@@ -35,6 +36,18 @@ window.onload = function() {
     // arrival.innerHTML = getOutboundFlights(apiResult, 1).destination.airport;
   }
 
+=======
+  // var detailsButtown = document.getElementById('detailsButton');
+  // detailsButton.onclick = function() {
+  //   console.log("Oh, I was clicked.");
+  //   console.log(getFlightData(origin.value, destination.value, departureDate.value));
+  // }
+
+  $(document).ready(function() {
+    getFlightData('SYD', 'LON', '2016-07-28');
+  })
+
+>>>>>>> a3ff39e01f87011603cd4473c1ab38f986b55bf4
   // var getStartedButton = document.getElementById('getStarted');
   // getStartedButton.onclick = function() {
   //   var overlay = document.getElementById('overlay');
