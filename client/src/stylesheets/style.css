@@ -123,6 +123,11 @@ header {
   height: 4.65rem;
 }
 
+.form #search-box-destination {
+  height: 4.65rem;
+}
+
+
 #details-button {
   border: none;
   font-size: 1.3rem;
@@ -160,6 +165,11 @@ header {
   opacity: 0.8;
 }
 
+.card #card-bg-image img {
+  height: 500px;
+  width: 650px;
+}
+
 .content {
   color: #444f5a;
   top: 5%;
@@ -170,17 +180,16 @@ header {
 
 .content h3 {
   color: black;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
+  font-weight: 100;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
-.content p {
+.content ul {
   font-weight: 300;
   line-height: 1.4em;
-  margin-bottom: 15px;
   text-align: justify;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .description img {
@@ -189,12 +198,7 @@ header {
   background-color: white; 
   display: block; 
   margin: 0 auto;
-}
-
-.card-bg-image {
-  /*background-size: cover;
-*/  height: 500px;
-  width: 500px;
+  margin-bottom: 2.5rem;
 }
 
 #button {
