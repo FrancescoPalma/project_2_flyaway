@@ -21,6 +21,20 @@ header {
   z-index: -100;
 }
 
+.text-form-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-items: center;
+  width: 400px;
+  height: 150px;
+  background: rgba(0,0,0,0.5);
+  margin: 0 auto;
+}
+
 #overlay {
   display: flex;
   flex-direction: column;
@@ -37,14 +51,14 @@ header {
   margin: 0 auto;
 }
 
-#overlay h3 {
+.question-text {
   text-align: center;
   color: #fff;
   font-weight: 100;
   font-size: 25px;
 }
 
-#overlay button {
+.nice-button {
   border: none;
   font-size: 1.3rem;
   background: rgba(255,255,255,0.23);
@@ -53,7 +67,7 @@ header {
   transition: .3s background;
 }
 
-#overlay button:hover {
+.nice-button:hover {
   background: #82cafa;
 }
 
