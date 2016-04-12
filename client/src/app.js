@@ -22,7 +22,7 @@ $(document).ready(function() {
   $('#destination-button').click(function(e) {
     e.preventDefault();
     hidePage();
-    showElement('#main-form');
+    showElement('#home');
   })
 
 })
