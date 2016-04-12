@@ -21,6 +21,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "async": "^2.0.0-rc.3",
     "flickrapi": "^0.4.2",
     "json-loader": "^0.5.4",
     "lodash": "^4.9.0",
