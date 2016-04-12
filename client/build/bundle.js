@@ -40,20 +40,29 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(module) {var SearchFormView = __webpack_require__(2);
+	/* WEBPACK VAR INJECTION */(function(module) {var SearchFormView = __webpack_require__(34);
 	var test = new SearchFormView;
 	module.hot.accept();
-	__webpack_require__(3);
+	__webpack_require__(5);
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(33)(module)))
 
 /***/ },
-/* 1 */
+
+/***/ 5:
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+
+/***/ 33:
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -69,7 +78,8 @@
 
 
 /***/ },
-/* 2 */
+
+/***/ 34:
 /***/ function(module, exports) {
 
 	function Test() {
@@ -80,12 +90,7 @@
 	}
 	module.exports = Test;
 
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-
-
 /***/ }
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=bundle.js.map
