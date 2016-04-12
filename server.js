@@ -27,7 +27,6 @@ app.get('/flights', function(req,res){
   })
 });
 
-
 app.get('/hotels', function(req,res){
   var url = 'mongodb://localhost:27017/flightInformation';
   MongoClient.connect(url, function(err, db){
@@ -42,15 +41,6 @@ app.get('/hotels', function(req,res){
     })
   })
 });
-
-
-
-
-
-
-
-
-
 
 app.use(express.static('client/build'));
 
