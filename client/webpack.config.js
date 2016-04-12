@@ -6,6 +6,9 @@ config = {
     filename: "bundle.js",
     path: "./build",
   },
+  externals: {
+    "jquery": "jQuery"
+  },
   devServer: {
     contentBase: ".",
     inline: true,
