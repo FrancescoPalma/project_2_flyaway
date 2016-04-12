@@ -57,7 +57,6 @@
 	var getFlightPrice = __webpack_require__(14).getFlightPrice;
 	
 	$(document).ready(function() {
-	  // getFlightData('SYD', 'NYC', '2016-07-20');
 	  function showElement(id) { $(id).show(); }
 	  function hidePage() { $('.page').hide(); }
 	  $('#slider').hide();
@@ -78,6 +77,11 @@
 	    hidePage();
 	    showElement('#trip-details');
 	  });
+	
+	  $('#show-flight-details-button').click(function(e) {
+	    hidePage();
+	    showElement('#flight-results');
+	  })
 	})
 
 
@@ -20779,7 +20783,7 @@
 	function populateFlightsView(origin, destination, departureDate, returnDate) {
 	  var stopoversOnDeparture = false;
 	  var stopoversOnReturn = false;
-	  // var departureSearchResults = getFlightData(origin, destination, departureDate);
+	  var departureSearchResults = getFlightData(origin, destination, departureDate);
 	  // var returnSearchResults = getFlightData(destination, origin, returnDate);
 	  // var flightDetails = getFlightDetails;
 	  var flightResultsContainer = $('.flight-results-container');
@@ -20788,13 +20792,6 @@
 	  card.innerHTML = '<div id="origin-cityname"></div><div id="destination-cityname"></div><div id="oneway-origin-iata"></div><div id="oneway-destination-iata"></div><div id="return-origin-iata"></div><div id="return-destination-iata"></div><div id="total-price"></div><div id="oneway-flight-duration"></div><div id="return-flight-duration"></div><div id="oneway-flight-price"></div><div id="return-flight-price"></div><div id="oneway-number-stopovers"></div><div id="return-number-stopovers"></div>'
 	
 	  flightResultsContainer.append(card);
-	  // document.body.appendChild(card);
-	
-	
-	  // originCityName.innerHTML = IATAAPI reverse lookup
-	  // destinationCityName.innerHTML = IATAAPI reverse lookup
-	
-	
 	}
 	
 	function writeCardContents(data, index) {

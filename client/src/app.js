@@ -11,7 +11,6 @@ var getOutboundFlights = require('./models/flight_api').getOutboundFlights;
 var getFlightPrice = require('./models/flight_api').getFlightPrice;
 
 $(document).ready(function() {
-  // getFlightData('SYD', 'NYC', '2016-07-20');
   function showElement(id) { $(id).show(); }
   function hidePage() { $('.page').hide(); }
   $('#slider').hide();
@@ -32,4 +31,9 @@ $(document).ready(function() {
     hidePage();
     showElement('#trip-details');
   });
+
+  $('#show-flight-details-button').click(function(e) {
+    hidePage();
+    showElement('#flight-results');
+  })
 })
