@@ -2,7 +2,7 @@ var pick = require('lodash/pick');
 function getFlightData(origin, destination, departureDate) {
   console.log("getFlights called");
   var url = "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=bX8HkNGmgrYd81Z9ne6OyMp4WhAiYoyS&origin=" + origin + "&destination=" + destination + "&departure_date=" + departureDate + "&currency=GBP&number_of_results=2";
-  // 2016-06-25
+  // 2016-06-27
 
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
