@@ -7,5 +7,22 @@ var getOutboundFlights = require('./models/flight_api').getOutboundFlights;
 var getFlightPrice = require('./models/flight_api').getFlightPrice;
 
 $(document).ready(function() {
+  function showElement(id) { $(id).show(); }
+  function hidePage() { $('.page').hide(); }
+
+  hidePage();
+  showElement('#home');
+
+  $('#get-started').click(function(e) {
+    e.preventDefault();
+    hidePage();
+    showElement('#where-to-go');
+  })
+
+  $('#destination-button').click(function(e) {
+    e.preventDefault();
+    hidePage();
+    showElement('#main-form');
+  })
 
 })
