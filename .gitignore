@@ -1,12 +1,7 @@
 node_modules
 bundle.js
-<<<<<<< HEAD
 bundle.js.map
 style.css
 styles.css
 styles.css.map
-=======
-styles.css
-styles.css.map
-bundle.js/map
->>>>>>> develop
+
