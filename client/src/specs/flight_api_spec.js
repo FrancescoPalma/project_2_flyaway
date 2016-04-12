@@ -5,6 +5,7 @@ var getTotalFlightPrice = require('../models/flight_api').getTotalFlightPrice;
 var getOriginIata = require('../models/flight_api').getOriginIata;
 var getDestinationIata = require('../models/flight_api').getDestinationIata;
 var getOneWayFlightDuration = require('../models/flight_api').getOneWayFlightDuration;
+var getNumberOfStopovers = require('../models/flight_api').getNumberOfStopovers;
 
 var data = require('./flight_api_sample_data.json');
 
@@ -41,6 +42,10 @@ describe('Flight Data Processing', function() {
 
     it('should return the duration of journey', function () {
       assert.equal(41, getOneWayFlightDuration(data, 0));
+    });
+
+    it('should have 1 stopover', function () {
+      assert.equal(1, getNumberOfStopovers(data, 0));
     });
 
   });

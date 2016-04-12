@@ -8,7 +8,6 @@ var getFlickrImagesByTag = require('./models/flickr_api').getFlickrImagesByTag;
 var getFlightData = require('./models/flight_api').getFlightData;
 var getOutboundFlights = require('./models/flight_api').getOutboundFlights;
 var getFlightPrice = require('./models/flight_api').getFlightPrice;
-var moment = require('moment');
 
 $(document).ready(function() {
   function showElement(id) { $(id).show(); }

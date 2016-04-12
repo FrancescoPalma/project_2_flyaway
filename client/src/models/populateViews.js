@@ -1,6 +1,8 @@
 var getFlightData = require('./flight_api').getFlightData;
 var getFlightDetails = require('./flight_api').getFlightDetails;
 var getTotalFlightPrice = require('./flight_api').getTotalFlightPrice;
+var getOneWayFlightDuration = require('./flight_api').getOneWayFlightDuration;
+var getNumberOfStopovers = require('./flight_api').getNumberOfStopovers;
 
 var originCityName = $("origin-cityname");
 var destinationCityName = $("destination-cityname");
@@ -39,12 +41,12 @@ function populateFlightsView(origin, destination, departureDate, returnDate) {
   returnOriginIATA.innerHTML = getOriginIata(departureSearchResults, index);
   returnDestinationIATA.innerHTML = getDestinationIata(departureSearchResults, index);
   totalPrice.innerHTML = getTotalFlightPrice(departureSearchResults, index) + getTotalFlightPrice(returnSearchResults, index);
-  onewayFlightDuration.innerHTML =
-  returnFlightDuration.innerHTML =
-  onewayFlightPrice.innerHTML =
-  returnFlightPrice.innerHTML =
-  onewayNumberStopovers.innerHTML =
-  returnNumberStopovers.innerHTML =
+  onewayFlightDuration.innerHTML = getOneWayFlightDuration(data, index);
+  returnFlightDuration.innerHTML = getOneWayFlightDuration(data, index);
+  onewayFlightPrice.innerHTML = getOneWayFlightPrice(data, index);
+  returnFlightPrice.innerHTML = getFlightPrice(data, index);
+  onewayNumberStopovers.innerHTML = getNumberOfStopovers(data, index);
+  returnNumberStopovers.innerHTML = getNumberOfStopovers(data, index);
 
 }
 

@@ -67,6 +67,9 @@ function getOneWayFlightDuration(data, index) {
   return time2.diff(time1, 'hours');
 }
 
+function getNumberOfStopovers(data, index) {
+  return data.results[index].itineraries[0].outbound.flights.length - 1;
+}
 
 module.exports = {
   getFlightData: getFlightData,
@@ -75,5 +78,6 @@ module.exports = {
   getTotalFlightPrice: getTotalFlightPrice,
   getOriginIata: getOriginIata,
   getDestinationIata: getDestinationIata,
-  getOneWayFlightDuration: getOneWayFlightDuration
+  getOneWayFlightDuration: getOneWayFlightDuration,
+  getNumberOfStopovers: getNumberOfStopovers
 }
