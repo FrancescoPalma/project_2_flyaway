@@ -239,6 +239,10 @@ header {
   color: #333333;
 }
 
+.standard-total{
+  font-size: 25px;
+}
+
 .standard-border {
   border: 1px #b0b0b0 solid;
   border-radius: 2px;
@@ -257,18 +261,7 @@ header {
   border-radius: 2px;
 }
 
-.highlight {
-  background: #ed1c24; 
-}
 
-.highlight-text {
-  color: #ed1c24;
-}
-
-.highlight-border {
-  border: 2px #ed1c24 solid;
-  border-radius: 2px;
-}
 
 .enterprise {
   background: #414142; 
@@ -367,6 +360,7 @@ header {
   line-height: 1em;
 }
 
+
 #middle {
   line-height: 1em;
   font-size: 44px;
@@ -417,13 +411,58 @@ header {
   padding: 20px 0 0;
 }
 
-.location {
+
+
+.row
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hours{
+  padding-left: 115px;
+}
+
+#arrow{
+    margin-right: 10px;
+    width: 107px;
+     height: 25px;
+     
+}
+
+#arrowFlip{
+      width: 102px;
+      height: 25px;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+  
+}
+
+
+
+/*.locationdep {
   border-top: 1px #d3d6da solid;
   line-height: 1em;
   padding: 8px 0;
   text-align: left;
   padding-left: 20px;
-}
+}*/
+
+
+
+/*.locationarr {
+  border-top: 1px #d3d6da solid;
+  line-height: 1em;
+  padding: 0px 8px;
+  text-align: right;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}*/
 
 .date {
   border-top: 1px #d3d6da solid;
