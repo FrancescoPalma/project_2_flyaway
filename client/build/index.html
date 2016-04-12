@@ -12,57 +12,61 @@
 
   <div id='page'>
 
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="twelve columns">
-            <p>FLYAWAY</p>
-          </div>
-        </div>
-      </div>
-    </header>
+<!-- BOX FOR RESULTS -->
+<div id="body">  
+  <div id"row">
+    <div class="page-center">
+  
+    <div id="infoCard" class="standard-border">
+      <div class="info">Select The Flight Of Your Choice</div>
+  
+      <div class="fineprint">We'll notify you if any flights may get cancelled due to God.</div>
+    </div><!-- Info Card -->
+  
+<!-- CARD ONE -->
 
-    <div id='video'>
-      <video autoplay loop>
-        <source src="./assets/sun.mp4" type="video/mp4">
-        <source src="./assets/sun.oggtheora.ogv" type="video/ogg">
-        <source src="./assets/sun.webmhd.webm" type="video/webm">
-      </video>
+  <div id="pricingCard" class="standard, standard-border">
+    <div id="top" class="standard"> LON - SYD</div>  
+    <div id="middle" class="standard-text">£386<span>/One Way</span></div>
+    <div id="btnOne" class="standard">Book Now</div>
+  
+    <div id="bottom">
+      <div class="location">London Heathrow <b>2016-06-10</b></div>
+      <div class="location">Sydney Airport <b>2016-06-11</b></div> 
     </div>
+  </div><!-- CARD ONE -->
+  
 
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns">
-          <div id="overlay">
-            <h3>Fly with us towards your Dreams</h3>
-            <button id="getStarted">Start your Journey</button>
-          </div>
-        </div>
-      </div>
+  <!-- CARD TWO -->
+  <div id="pricingCard" class="highlight, highlight-border">
+    <div id="top" class="highlight">LON - SYD</div> 
+      <div id="middle" class="highlight-text">£109<span>/One Way</span></div>
+      <div id="btnOne" class="highlight">BOOK NOW</div>
+  
+    <div id="bottom">
+      <div class="location">London <b>2016-06-11</b>/One Way</div>
+      <div class="location">Sydney<b>2016-06-11</b></div> 
     </div>
+    <div id="mostPop" class"most-pop">BEST DEAL!</div>
+  </div><!-- Pricing Card Popular -->  
+  
+  <!-- CARD THREE -->
+  <div id="pricingCard" class="standard, standard-border">
+    <div id="top" class="standard">LON - SYD</div> 
+      <div id="middle" class="standard-text">£879<span>/One Way</span></div>
+      <div id="btnOne" class="standard">BOOK NOW</div>
+    <div id="bottom">
+      <div class="location">London<b>2016-06-13</b>/One Way</div>
+      <div class="location">Sydney<b>2016-06-14</b></div> 
+    </div>
+  </div><!-- CARD THREE -->
+  
+  </div><!-- Page Center -->
+  </div><!-- Row One -->  
+</div><!-- Body -->
 
-  </div>
 
-  <div id='form'>
 
-    <form method="get" accept-charset="utf-8">
-      <input id="search-box-origin" type="text" placeholder="Origin"></input>
-      <input id="search-box-destination" type="text" placeholder="Destinatio"></input>
-      <input id="departure-date" type="text" placeholder="DepDate"></input>
-      <input type="text" placeholder="RetDate"></input>
-    </form>
-
-    <button id='details-button'>GRAB API INFO</button>
-
-  </div>
-
-  <ul>
-      <li id="departure-date"></li>
-      <li id="return-date"></li>
-      <li id="price-per-adult"></li>
-      <li id="origin"></li>
-      <li id="arrival"></li>
-  </ul>
 
   <!-- <footer>
      <p>2016 - © All Rights Reserved - Designed & Developed by <b style="color:#82cafa ">Team Mercury</b></p>
