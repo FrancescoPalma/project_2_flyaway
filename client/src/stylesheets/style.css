@@ -20,7 +20,8 @@ html, body, #page {
   width:100%;
   background-size: cover;
   background-position: center;
-=======
+}
+
 #bg {
   position: fixed;
   top: 0;
@@ -30,7 +31,6 @@ html, body, #page {
   /* Preserve aspet ratio */
   min-width: 100%;
   min-height: 100%;
->>>>>>> origin/feature/html-results-page
 }
 
 header {
@@ -216,7 +216,8 @@ header {
   background-color: white;
   display: block;
   margin: 0 auto;
-=======
+}
+
 .btn {
   width: 25%;
   margin: auto;
@@ -228,7 +229,6 @@ header {
   border-radius: 3px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
->>>>>>> origin/feature/html-results-page
 }
 
 .card-bg-image {
