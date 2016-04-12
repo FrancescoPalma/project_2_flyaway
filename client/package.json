@@ -25,6 +25,7 @@
     "flickrapi": "^0.4.2",
     "json-loader": "^0.5.4",
     "lodash": "^4.9.0",
+    "moment": "^2.12.0",
     "node-sass": "^3.4.2",
     "sass-loader": "^3.2.0",
     "style": "0.0.3",

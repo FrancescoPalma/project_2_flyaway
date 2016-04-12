@@ -1,6 +1,6 @@
 var getFlightData = require('./flight_api').getFlightData;
 var getFlightDetails = require('./flight_api').getFlightDetails;
-var getFlightPrice = require('./flight_api').getFlightPrice;
+var getTotalFlightPrice = require('./flight_api').getTotalFlightPrice;
 
 var originCityName = $("origin-cityname");
 var destinationCityName = $("destination-cityname");
@@ -36,9 +36,9 @@ function populateFlightsView(origin, destination, departureDate, returnDate) {
   // destinationCityName.innerHTML = IATAAPI reverse lookup
   onewayOriginIATA.innerHTML = getOriginIata(departureSearchResults, index);
   onewayDestinationIATA.innerHTML = getDestinationIata(departureSearchResults, index);
-  returnOriginIATA$.innerHTML =
-  returnDestinationIATA$.innerHTML =
-  totalPrice.innerHTML =
+  returnOriginIATA.innerHTML = getOriginIata(departureSearchResults, index);
+  returnDestinationIATA.innerHTML = getDestinationIata(departureSearchResults, index);
+  totalPrice.innerHTML = getTotalFlightPrice(departureSearchResults, index) + getTotalFlightPrice(returnSearchResults, index);
   onewayFlightDuration.innerHTML =
   returnFlightDuration.innerHTML =
   onewayFlightPrice.innerHTML =

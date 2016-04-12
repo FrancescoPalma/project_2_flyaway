@@ -4,6 +4,8 @@ var getFlightDetails = require('../models/flight_api').getFlightDetails;
 var getTotalFlightPrice = require('../models/flight_api').getTotalFlightPrice;
 var getOriginIata = require('../models/flight_api').getOriginIata;
 var getDestinationIata = require('../models/flight_api').getDestinationIata;
+var getOneWayFlightDuration = require('../models/flight_api').getOneWayFlightDuration;
+
 var data = require('./flight_api_sample_data.json');
 
 describe('Flight Data Processing', function() {
@@ -35,6 +37,10 @@ describe('Flight Data Processing', function() {
 
     it('should return the destination IATA', function () {
       assert.equal('SYD', getDestinationIata(data, 0));
+    });
+
+    it('should return the duration of journey', function () {
+      assert.equal(41, getOneWayFlightDuration(data, 0));
     });
 
   });
