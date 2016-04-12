@@ -14,14 +14,14 @@ window.onload = function() {
   var departureDate = document.querySelector('.first-date');
   var returnDate = document.querySelector('.second-date');
 
-  var detailsButtown = document.getElementById('detailsButton');
-  detailsButton.onclick = function() {
-    console.log("Oh, I was clicked.");
-    console.log(getFlightData(origin.value, destination.value, departureDate.value));
-  }
+  // var detailsButtown = document.getElementById('detailsButton');
+  // detailsButton.onclick = function() {
+  //   console.log("Oh, I was clicked.");
+  //   console.log(getFlightData(origin.value, destination.value, departureDate.value));
+  // }
 
   $(document).ready(function() {
-
+    getFlightData('SYD', 'LON', '2016-07-28');
   })
 
   // var getStartedButton = document.getElementById('getStarted');
