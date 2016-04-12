@@ -22,6 +22,25 @@ window.onload = function() {
   var origin = document.getElementById('origin');
   var arrival = document.getElementById('arrival');
 
+  var datepicker = new Datepickk();
+  console.log(datepicker);
+
+  var datePickerButton = document.querySelector('.date-picker-btn');
+  datePickerButton.onclick = function(e) {
+    e.preventDefault();
+    datepicker.show();
+    datepicker.onSelect = function() {
+      /*Set range*/
+      datepicker.range = true;
+      /*Get range*/
+      // console.log(datepicker.range);
+      // var x = console.log(this.toLocaleDateString());
+    };
+    datepicker.onClose = function() {
+      var x = toLocaleDateString();
+      console.log(x);
+    }
+  }
 
   var detailsButton = document.querySelector('#details-button');
   detailsButton.onclick = function() {

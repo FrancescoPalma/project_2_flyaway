@@ -58,7 +58,7 @@ header {
   background: #82cafa;
 }
 
-/*FORM STYLE*/
+/*FLIGHT FORM STYLE*/
 .form {
   width: 400px;
   margin: 0 auto;
@@ -111,11 +111,21 @@ header {
   font-size: 1.5rem;
 }
 
-.form input[type="text"],
-.form input[type="date"] {
-  background: #000;
-  color: #fff;
+.form input[type="text"] {
+  background: #fff;
+  color: #000;
   border-radius: 1.5rem;
+  border-color: #000;
+  border-width: 0.1rem;
+  margin: 0 auto;
+}
+
+.form input[type="text"]:hover {
+  background: #fff;
+  color: #000;
+  border-radius: 1.5rem;
+  border-color: #0D47A1;
+  border-width: 0.3rem;
   margin: 0 auto;
 }
 
@@ -127,6 +137,21 @@ header {
   height: 4.65rem;
 }
 
+.date-picker-btn {
+  border: none;
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #000;
+  border-radius: 1.5rem;
+  transition: .3s background;
+  display: block;
+  margin: 0 auto;
+}
+
+.date-picker-btn:hover {
+  background: #000;
+  color: #fff;
+}
 
 #details-button {
   border: none;
@@ -141,7 +166,7 @@ header {
   background: #000;
   color: #fff;
 } 
-/*END FORM STYLE*/
+/*END FLIGHT FORM STYLE*/
 
 /*ACCOMMODATION STYLE*/
 .accommodation-container {
@@ -214,7 +239,6 @@ header {
   color: #fff;
 }
 /*END ACCOMMODATION STYLE*/
-
 
 footer {
   position: fixed;
