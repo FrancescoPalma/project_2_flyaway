@@ -2,6 +2,8 @@ require('./stylesheets/animate.css');
 require('./stylesheets/main.sass');
 require('./stylesheets/style.css');
 require('./stylesheets/skeleton.css');
+require('./helpers/autocomplete_origin.js');
+require('./helpers/autocomplete_destination.js');
 
 var getFlightData = require('./models/flight_api').getFlightData;
 var populateFlightsView = require('./models/populateViews').populateFlightsView;
@@ -34,8 +36,8 @@ $(document).ready(function() {
     datepicker.show();
 
     datepicker.onSelect = function() {
+      datepicker.range = true;
       var getFirstDate = this.toLocaleDateString();
-      console.log(getFirstDate);
       var formatDate = getFirstDate.split('/');
       var day = formatDate[1];
       var month = formatDate[0];
@@ -66,8 +68,16 @@ $(document).ready(function() {
     showElement('#trip-details');
   });
 
-  $('#show-flight-details-button').click(function(e) {
-    hidePage();
-    showElement('#flight-results');
-  })
+  var departingFromBox = document.getElementById('search-box-origin');
+  var goingToBox = document.getElementById('search-box-destination');
+
+  goingToBox.onlick = function(e) {
+    e.preventDefault();
+    console.log("hello form ric");
+  }
+
+  // $('#show-flight-details-button').click(function(e) {
+  //   hidePage();
+  //   showElement('#flight-results');
+  // })
 });

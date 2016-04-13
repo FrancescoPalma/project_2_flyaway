@@ -5,6 +5,7 @@ html, body, #page {
   overflow-y: scroll;
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
+
 .temp-card {
   height: 300px;
   width: 200px;

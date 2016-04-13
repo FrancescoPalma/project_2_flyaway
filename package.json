@@ -27,6 +27,7 @@
     "mongodb": "^2.1.14"
   },
   "dependencies": {
+    "autocomplete": "0.0.1",
     "body-parser": "^1.15.0",
     "datepickk": "^1.0.6",
     "express": "^4.13.4",
