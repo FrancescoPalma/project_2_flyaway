@@ -21,6 +21,7 @@
     </video>
   </div>
 
+  <div id="home" class="page">
     <div class="container">
       <div class="row">
         <div class="twelve columns">
@@ -31,7 +32,23 @@
         </div>
       </div>
     </div>
+  </div>
 
+  <div id="where-to-go" class="page">
+    <div class="container">
+      <div class="row">
+        <div class="twelve colums">
+          <div class="text-form-container">
+            <h3 class="question-text">Where do you want to go?</h3>
+            <input id="where-to-go-input" type="text" placeholder="Bahamas, Lisbon..."></input>
+            <button id="where-to-go-button" class="nice-button">GO</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="flights-search-form" class="page">
     <div class="form">
       <h2 class="form-header">
         Flights
@@ -45,45 +62,14 @@
         <button class="date-picker-btn">Pick the Dates</button>
         <span id="first-date"></span>
         <span id="second-date"></span>
-        <button id="show-flight-details-button">Next</button>
+        <button class="nice-button" id="show-flight-details-button">Next</button>
       </form>
-    </div>
-
-  <div id="where-to-go" class="page">
-    <div class="container">
-      <div class="row">
-        <div class="twelve colums">
-          <div class="text-form-container">
-            <h3 class="question-text">Where do you want to go?</h3>
-            <input id="destination-input" type="text" placeholder="Bahamas, Lisbon..."></input>
-            <button id="destination-button" class="nice-button">GO</button>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
-  <div id="trip-details" class="page">
-    <div class="container">
-      <div class="row">
-        <div class="twelve colums">
-          <div class="form">
-            <h2 class="form-header">
-              Your Flight
-              <img src="./assets/plane.ico">
-            </h2>
-            <form id="flight-form" method="get" accept-charset="utf-8">
-              <p><input id="search-box-origin" type="text" placeholder="Origin"></input></p>
-              <p><input id="search-box-destination" type="text" placeholder="Destination"></input></p>
-              <p><input id="departure-date" type="date" placeholder="DepartureDate"></input></p>
-              <p><input id="arrival-date" type="date" placeholder="ArrivalDate"></input></p>
-              <button id="trip-details" class="nice-button">Next</button>
-            </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div id="flights-result-container" class="page">
+
+  </div>
 <!--
     <div class="accommodation-container">
 
