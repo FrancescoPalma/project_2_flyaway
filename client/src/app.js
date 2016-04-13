@@ -40,7 +40,7 @@ window.onload = function() {
       var formattedDate = year + "-" + month + "-" + day;
 
       var displayFirstDate = document.getElementById('first-date'); 
-      displayFirstDate.innerHTML = formattedDate; 
+      displayFirstDate.innerText = "From: " + formattedDate; 
       
       datepicker.onSelect = function() {
         var getSecondDate = this.toLocaleDateString();
@@ -50,7 +50,7 @@ window.onload = function() {
         var year = formatDate[2];
         var formattedDate = year + "-" + month + "-" + day;
         var displayDate = document.getElementById('second-date');
-        displayDate.innerHTML = formattedDate;
+        displayDate.innerText = "Until: " + formattedDate;
       }
     }
   }

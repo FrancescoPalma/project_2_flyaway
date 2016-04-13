@@ -153,6 +153,14 @@ header {
   color: #fff;
 }
 
+#first-date {
+  display: block;
+}
+
+#second-date {
+  display: block;
+}
+
 #details-button {
   border: none;
   font-size: 1.3rem;
