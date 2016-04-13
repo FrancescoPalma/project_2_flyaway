@@ -5,6 +5,26 @@ html, body, #page {
   overflow-y: scroll;
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
+/* "origin-cityname", "destination-cityname", "origin-iata", "destination-iata", "flight-duration", "flight-price", "number-stopovers", "arrow" */
+.flight-card {
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  opacity: 0.9;
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+}
+
+.selected {
+  background-color: red;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.arrow {
+  background-size: 200px;
+}
 
 .temp-card {
   height: 300px;
@@ -88,7 +108,7 @@ header {
 }
 
 .nice-button {
-  border: none;
+  border: 1px lightblue;
   font-size: 1.3rem;
   background: rgba(255,255,255,0.23);
   color: black;

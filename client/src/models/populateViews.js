@@ -5,7 +5,7 @@ var getNumberOfStopovers = require('./flight_api').getNumberOfStopovers;
 var getOriginIata = require('./flight_api').getOriginIata;
 var getDestinationIata = require('./flight_api').getDestinationIata;
 
-var originCityName, destinationCityName, originIATA, destinationIATA, flightDuration, flightPrice, numberStopovers;
+var originCityName, destinationCityName, originIATA, destinationIATA, flightDuration, flightPrice, numberStopovers, button, card;
 
 var divIds = ["origin-cityname", "destination-cityname", "origin-iata", "destination-iata", "flight-duration", "flight-price", "number-stopovers"];
 
@@ -16,15 +16,31 @@ function populateFlightsView(data) {
     createCard(itinerary);
     console.log("writing stuff to a card");
     writeCardContents(data, itinerary);
+
+  }
+  var buttons =  document.querySelectorAll('.select-card');
+  console.log("number of buttons", buttons.length);
+  for (var i = 0; i < buttons.length; i++) {
+    console.log("adding an event listener to", button[i]);
+    var self = buttons[i];
+    self.addEventListener('click', function (event) {
+      event.preventDefault;
+      self.parentNode.className = "flight-card";
+      self.parentNode.className += " selected";
+    }, false);
   }
 }
 
 function createCard(index) {
   var flightResultsContainer = document.querySelector('.flight-results-container');
-  var card = document.createElement('section');
+  card = document.createElement('section');
   var div = document.createElement('div');
 
-  card.className = 'temp-card';
+  card.className = 'flight-card';
+  button = document.createElement('button');
+  button.id = 'select-flight-button';
+  button.innerHTML = "SELECT";
+  button.className = "nice-button select-card";
 
   for(var id of divIds) {
     var div = document.createElement('div');
@@ -33,6 +49,7 @@ function createCard(index) {
   }
 
   flightResultsContainer.appendChild(card);
+  card.appendChild(button);
   getCardIds(index);
   console.log("card has been created")
 }
@@ -45,15 +62,29 @@ function getCardIds(index) {
   flightDuration = document.getElementById("flight-duration" + index);
   flightPrice = document.getElementById("flight-price" + index);
   numberStopovers = document.getElementById("number-stopovers" + index);
+  button = document.getElementById('select-flight-button');
 }
 
 function writeCardContents(data, index) {
+  originCityName.className = 'origin-city';
   originCityName.innerHTML = 'From: ' + getOriginIata(data, index);
+
+  destinationCityName.className = 'destination-city';
   destinationCityName.innerHTML = 'To: ' + getDestinationIata(data, index);
+
+  originIATA.className = 'origin-iata';
   originIATA.innerHTML = "Origin IATA " + getOriginIata(data, index);
+
+  destinationIATA.className = 'destination-iata';
   destinationIATA.innerHTML = "Destination IATA " + getDestinationIata(data, index);
+
+  flightDuration.className = 'flight-duration';
   flightDuration.innerHTML = "Flight Duration " + getFlightDuration(data, index) + "h";
+
+  flightPrice.className = 'flight-price';
   flightPrice.innerHTML = "Flight Price " + getTotalFlightPrice(data, index);
+
+  numberStopovers.className = 'number-stopovers';
   numberStopovers.innerHTML = "Stopovers " + getNumberOfStopovers(data, index);
 }
 

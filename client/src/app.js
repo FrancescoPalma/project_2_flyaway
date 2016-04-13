@@ -17,7 +17,7 @@ $(document).ready(function() {
   $('#slider').hide();
   hidePage();
   showElement('#home');
-  console.log(getFlightData('SYD', 'LON', '2016-05-06'));
+  showElement('#flights-result-container');
 
   var origin = document.getElementById('origin');
   var destination = document.getElementById('destination');
@@ -39,10 +39,7 @@ $(document).ready(function() {
 
   $('#show-flight-results-button').click(function(e) {
     e.preventDefault();
-    console.log('2016-04-13');
-    console.log(departureDate);
-    console.log(departureDate == '2016-04-13');
-    // hidePage();
+    hidePage();
     getFlightData(origin.value.substring(0, 3), destination.value.substring(0, 3), departureDate, populateFlightsView);
     showElement('#flights-result-container');
   })
