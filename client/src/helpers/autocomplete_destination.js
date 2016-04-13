@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("Hello from autocomplete");
   $("#destination").autocomplete({
     source: "/airports",
     minLength: 2,

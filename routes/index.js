@@ -1,4 +1,5 @@
-var  _ = require('lodash'),
+var each = require('lodash/each'),
+    map = require('lodash/map');
     fs = require('fs'),
     ac = require('autocomplete');
 
@@ -13,7 +14,7 @@ var namesAC = ac.connectAutocomplete(),
 fs.readFile('client/build/airport-codes.dat', function(err, data) {
   var airports = [];
 
-  _.each(data.toString().split('\n'), function(a) {
+  each(data.toString().split('\n'), function(a) {
     var parts = a.trim().split("|"),
         airportName = parts[0],
         airportNameLower = airportName.toLowerCase(),
@@ -37,7 +38,7 @@ exports.airports = function(req, res) {
   var airport = req.query["term"].toLowerCase(),
       results = namesAC.search(airport);
 
-  var airportResults = _.map(results, function(a) {
+  var airportResults = map(results, function(a) {
     return airportNames[a] || airportCodes[a];
   });
 
