@@ -99,7 +99,7 @@ header {
   background: #82cafa;
 }
 
-/*FORM STYLE*/
+/*FLIGHT FORM STYLE*/
 .form {
   width: 400px;
   margin: 0 auto;
@@ -152,18 +152,62 @@ header {
   font-size: 1.5rem;
 }
 
-.form input[type="text"],
-.form input[type="date"] {
-  background: #000;
-  color: #fff;
+.form input[type="text"] {
+  background: #fff;
+  color: #000;
   border-radius: 1.5rem;
+  border-color: #000;
+  border-width: 0.1rem;
+  margin: 0 auto;
+}
+
+.form input[type="text"]:hover {
+  background: #fff;
+  color: #0D47A1;
+  border-radius: 1.5rem;
+  border-color: #0D47A1;
+  border-width: 0.3rem;
   margin: 0 auto;
 }
 
 .form #search-box-origin {
   height: 4.65rem;
 }
-/*END FORM STYLE*/
+
+.form #search-box-destination {
+  height: 4.65rem;
+}
+
+.date-picker-btn {
+  border: none;
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #000;
+  border-radius: 1.5rem;
+  transition: .3s background;
+  display: block;
+  margin: 0 auto;
+}
+
+.date-picker-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+#details-button {
+  border: none;
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #000;
+  border-radius: 1.5rem;
+  transition: .3s background;
+}
+
+#details-button:hover {
+  background: #000;
+  color: #fff;
+}
+/*END FLIGHT FORM STYLE*/
 
 /*ACCOMMODATION STYLE*/
 .accommodation-container {
@@ -187,6 +231,11 @@ header {
   opacity: 0.8;
 }
 
+.card #card-bg-image img {
+  height: 500px;
+  width: 650px;
+}
+
 .content {
   color: #444f5a;
   top: 5%;
@@ -197,17 +246,16 @@ header {
 
 .content h3 {
   color: black;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
+  font-weight: 100;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
-.content p {
+.content ul {
   font-weight: 300;
   line-height: 1.4em;
-  margin-bottom: 15px;
   text-align: justify;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .description img {
@@ -235,6 +283,7 @@ header {
   /*background-size: cover;
 */  height: 500px;
   width: 500px;
+  margin-bottom: 2.5rem;
 }
 
 /*END ACCOMMODATION STYLE*/
@@ -460,8 +509,6 @@ header {
 
 }
 
-
-
 #bottom {
   color: #333333;
   font-size: 15px;
@@ -485,7 +532,6 @@ header {
   text-align: left;
   padding-left: 20px;
 }
-
 footer {
   position: fixed;
   bottom: 0;

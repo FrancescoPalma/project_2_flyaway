@@ -3,6 +3,7 @@
 <head>
   <title>FlyAway</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="helpers/datepickk.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato:100, 400,700' rel='stylesheet' type='text/css'>
@@ -41,6 +42,22 @@
           </div>
         </div>
       </div>
+
+    <div class="form">
+
+      <h2 class="form-header">
+        Your Flight
+        <img src="./assets/plane.ico">
+      </h2>
+
+      <form id="flight-form" method="get" accept-charset="utf-8">
+        <p><input id="search-box-origin" type="text" placeholder="Origin"></input></p>
+        <p><input id="search-box-destination" type="text" placeholder="Destination"></input></p>
+        <button class="date-picker-btn">Get your Dates</button>
+        <span id="first-date"></span>
+        <span id="second-date"></span>
+        <button id="details-button">Next</button>
+      </form>
     </div>
   </div>
 
@@ -60,11 +77,31 @@
               <p><input id="arrival-date" type="date" placeholder="ArrivalDate"></input></p>
               <button id="trip-details" class="nice-button">Next</button>
             </form>
+<!--
+    <div class="accommodation-container">
+
+      <div class="card">
+        <div id="card-bg-image">
+          <img src="./assets/accommodation-example.jpg">
+        </div>
+        <div class="content">
+          <div class="description">
+            <h3>Your Accommodation</h3>
+            <img src="./assets/accommodation.png">
+            <ul>
+              <li>Descripition from Accommodation API goes here.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Curabitur vulputate nisi eget lectus hendrerit, facilisis tincidunt mi vehicula.</li>
+              <li>Nullam non odio ultrices, luctus est vitae, suscipit felis.</li>
+              <li>Ut tempor, augue vitae accumsan venenatis, arcu sem posuere lorem, a sodales massa erat eu purus.</li>
+            </ul>
+            <button id="button">Book Now</button>
+>>>>>>> origin/feature/pages
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div id="flight-results" class="">
     <div class="container flight-results-container">
@@ -75,7 +112,8 @@
     <p>2016 - © All Rights Reserved - Designed & Developed by <b style="color:#82cafa ">Team Mercury</b></p>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-2.2.3.min.js" type="text/javascript"></script>
-  <script src="bundle.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="helpers/datepickk.min.js"></script>
+<script src="bundle.js"></script>
 </body>
 </html>
