@@ -30,15 +30,16 @@ window.onload = function() {
     e.preventDefault();
     datepicker.show();
     datepicker.onSelect = function() {
-      /*Set range*/
       datepicker.range = true;
-      /*Get range*/
-      // console.log(datepicker.range);
-      // var x = console.log(this.toLocaleDateString());
-    };
-    datepicker.onClose = function() {
-      var x = toLocaleDateString();
-      console.log(x);
+      var getDate = this.toLocaleDateString();
+      console.log(getDate);
+      datepicker.onClose = function() {
+        var formatDate = getDate.split('/');
+        var day = formatDate[1];
+        var month = formatDate[0];
+        var year = formatDate[2];
+        console.log(year + "-" + month + "-" + day);
+      }
     }
   }
 
