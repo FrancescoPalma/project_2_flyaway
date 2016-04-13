@@ -1,16 +1,16 @@
 var moment = require('moment');
-function getFlightData(origin, destination, departureDate) {
+function getFlightData(origin, destination, departureDate, callback) {
 
   var url = "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=bX8HkNGmgrYd81Z9ne6OyMp4WhAiYoyS&origin=" + origin + "&destination=" + destination + "&departure_date=" + departureDate + "&currency=GBP&number_of_results=6";
 
   var xhr = new XMLHttpRequest();
-  console.log(url);
-
+  console.log("getFlights has been called");
   xhr.onreadystatechange = function() {
     if (xhr.readyState == XMLHttpRequest.DONE) {
       var jsonString = xhr.responseText;
       var data = JSON.parse(jsonString);
-      console.log(data);
+      console.log("data is ready");
+      callback(data);
     }
   }
   xhr.open("GET", url);
@@ -27,11 +27,7 @@ function breakBigObject(data) {
 }
 
 function singleFlight(data, index) {
-  if (data.results[index].itineraries[0].outbound.flights.length === 1) {
-    return true
-  } else {
-    return false
-  }
+  return (data.results[index].itineraries[0].outbound.flights.length === 1)
 }
 
 function getFlightDetails(data, index) {

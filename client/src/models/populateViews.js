@@ -1,47 +1,60 @@
-var getFlightData = require('./flight_api').getFlightData;
 var getFlightDetails = require('./flight_api').getFlightDetails;
 var getTotalFlightPrice = require('./flight_api').getTotalFlightPrice;
 var getOneWayFlightDuration = require('./flight_api').getOneWayFlightDuration;
 var getNumberOfStopovers = require('./flight_api').getNumberOfStopovers;
+var getOriginIata = require('./flight_api').getOriginIata;
+var getDestinationIata = require('./flight_api').getDestinationIata;
 
-var originCityName = $("origin-cityname");
-var destinationCityName = $("destination-cityname");
-var onewayOriginIATA = $("oneway-origin-iata");
-var onewayDestinationIATA = $("oneway-destination-iata");
-var returnOriginIATA$ = $("return-origin-iata");
-var returnDestinationIATA$ = $("return-destination-iata");
-var totalPrice = $("total-price");
-var onewayFlightDuration = $("oneway-flight-duration");
-var returnFlightDuration = $("return-flight-duration");
-var onewayFlightPrice = $("oneway-flight-price");
-var returnFlightPrice = $("return-flight-price");
-var onewayNumberStopovers = $("oneway-number-stovers");
-var returnNumberStopovers = $("return-number-stovers");
+var originCityName, destinationCityName, onewayOriginIATA, onewayDestinationIATA, returnOriginIATA, returnDestinationIATA, totalPrice, onewayFlightDuration, returnFlightDuration, onewayFlightPrice, returnFlightPrice, onewayNumberStopovers, returnNumberStopovers;
 
-function populateFlightsView(origin, destination, departureDate, returnDate) {
-  var stopoversOnDeparture = false;
-  var stopoversOnReturn = false;
-  var departureSearchResults = getFlightData(origin, destination, departureDate);
-  // var returnSearchResults = getFlightData(destination, origin, returnDate);
-  // var flightDetails = getFlightDetails;
-  var flightResultsContainer = $('.flight-results-container');
+var divIds = ["origin-cityname", "destination-cityname", "oneway-origin-iata", "oneway-destination-iata", "return-origin-iata", "return-destination-iata", "total-price", "oneway-flight-duration", "return-flight-duration", "oneway-flight-price", "return-flight-price", "oneway-number-stopovers", "return-number-stopovers"];
+
+function populateFlightsView(data) {
+  console.log("PopulateFlightsView has been called");
+  for(itinerary in data.results) {
+    console.log("creating a card");
+    createCard(itinerary);
+    console.log("writing stuff to a card");
+    writeCardContents(data, itinerary);
+  }
+}
+
+function createCard(index) {
+  var flightResultsContainer = document.querySelector('.flight-results-container');
   var card = document.createElement('section');
   card.className = 'temp-card';
-  card.innerHTML = '<div id="origin-cityname"></div><div id="destination-cityname"></div><div id="oneway-origin-iata"></div><div id="oneway-destination-iata"></div><div id="return-origin-iata"></div><div id="return-destination-iata"></div><div id="total-price"></div><div id="oneway-flight-duration"></div><div id="return-flight-duration"></div><div id="oneway-flight-price"></div><div id="return-flight-price"></div><div id="oneway-number-stopovers"></div><div id="return-number-stopovers"></div>'
+  for(id of divIds) {
+    card.innerHTML += (id + index);
+  }
+  flightResultsContainer.appendChild(card);
+  getCardIds();
+  console.log("card has been created")
+}
 
-  flightResultsContainer.append(card);
+function getCardIds(index) {
+  originCityName = document.getElementById("origin-cityname" + index);
+  destinationCityName = document.getElementById("destination-cityname" + index);
+  onewayOriginIATA = document.getElementById("oneway-origin-iata" + index);
+  onewayDestinationIATA = document.getElementById("oneway-destination-iata" + index);
+  returnOriginIATA = document.getElementById("return-origin-iata" + index);
+  returnDestinationIATA = document.getElementById("return-destination-iata" + index);
+  totalPrice = document.getElementById("total-price" + index);
+  onewayFlightDuration = document.getElementById("oneway-flight-duration" + index);
+  returnFlightDuration = document.getElementById("return-flight-duration" + index);
+  onewayFlightPrice = document.getElementById("oneway-flight-price" + index);
+  returnFlightPrice = document.getElementById("return-flight-price" + index);
+  onewayNumberStopovers = document.getElementById("oneway-number-stopovers" + index);
+  returnNumberStopovers = document.getElementById("return-number-stopovers" + index);
 }
 
 function writeCardContents(data, index) {
-  // onewayOriginIATA.innerHTML = getOriginIata(departureSearchResults, index);
-  // onewayDestinationIATA.innerHTML = getDestinationIata(departureSearchResults, index);
-  returnOriginIATA.innerHTML = getOriginIata(departureSearchResults, index);
-  returnDestinationIATA.innerHTML = getDestinationIata(departureSearchResults, index);
-  totalPrice.innerHTML = getTotalFlightPrice(departureSearchResults, index) + getTotalFlightPrice(returnSearchResults, index);
+  returnOriginIATA.innerHTML = getOriginIata(data, index);
+  returnDestinationIATA.innerHTML = getDestinationIata(data, index);
+  totalPrice.innerHTML = getTotalFlightPrice(data, index) + getTotalFlightPrice(data, index);
   onewayFlightDuration.innerHTML = getOneWayFlightDuration(data, index);
   returnFlightDuration.innerHTML = getOneWayFlightDuration(data, index);
-  onewayFlightPrice.innerHTML = getOneWayFlightPrice(data, index);
-  returnFlightPrice.innerHTML = getFlightPrice(data, index);
+  onewayFlightPrice.innerHTML = getTotalFlightPrice(data, index);
+  returnFlightPrice.innerHTML = getTotalFlightPrice(data, index);
   onewayNumberStopovers.innerHTML = getNumberOfStopovers(data, index);
   returnNumberStopovers.innerHTML = getNumberOfStopovers(data, index);
 }

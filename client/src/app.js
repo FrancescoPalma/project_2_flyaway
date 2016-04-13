@@ -3,6 +3,7 @@ require('./stylesheets/main.sass');
 require('./stylesheets/style.css');
 require('./stylesheets/skeleton.css');
 
+var getFlightData = require('./models/flight_api').getFlightData;
 var populateFlightsView = require('./models/populateViews').populateFlightsView;
 var changeBg = require('./helpers/slider.js');
 var getFlickrImagesByTag = require('./models/flickr_api').getFlickrImagesByTag;
@@ -16,12 +17,12 @@ $(document).ready(function() {
   $('#slider').hide();
   hidePage();
   showElement('#home');
-  populateFlightsView();
 
   $('#get-started').click(function(e) {
     e.preventDefault();
     hidePage();
-    showElement('#where-to-go');
+    getFlightData('SYD', 'NYC', '2016-07-04', populateFlightsView);
+    showElement('#flight-results');
   })
 
   $('#destination-button').click(function(e) {
@@ -36,4 +37,4 @@ $(document).ready(function() {
     hidePage();
     showElement('#flight-results');
   })
-})
+});
