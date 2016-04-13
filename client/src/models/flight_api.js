@@ -51,7 +51,7 @@ function getDestinationIata(data, index) {
   }
 }
 
-function getOneWayFlightDuration(data, index) {
+function getFlightDuration(data, index) {
   var time1 = moment(data.results[index].itineraries[0].outbound.flights[0].departs_at);
   var time2;
   if (singleFlight === true) {
@@ -74,6 +74,6 @@ module.exports = {
   getTotalFlightPrice: getTotalFlightPrice,
   getOriginIata: getOriginIata,
   getDestinationIata: getDestinationIata,
-  getOneWayFlightDuration: getOneWayFlightDuration,
+  getFlightDuration: getFlightDuration,
   getNumberOfStopovers: getNumberOfStopovers
 }

@@ -21,7 +21,7 @@ $(document).ready(function() {
   $('#get-started').click(function(e) {
     e.preventDefault();
     hidePage();
-    getFlightData('SYD', 'NYC', '2016-07-04', populateFlightsView);
+    getFlightData('EDI', 'PAR', '2016-07-04', populateFlightsView);
     showElement('#flight-results');
   })
 
