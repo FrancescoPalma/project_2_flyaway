@@ -6,13 +6,10 @@ require('./helpers/autocomplete_origin.js');
 require('./helpers/autocomplete_destination.js');
 require('./helpers/datepickk.js');
 
-var getFlightData = require('./models/flight_api').getFlightData;
 var populateFlightsView = require('./models/populateViews').populateFlightsView;
 var changeBg = require('./helpers/slider.js');
 var getFlickrImagesByTag = require('./models/flickr_api').getFlickrImagesByTag;
 var getFlightData = require('./models/flight_api').getFlightData;
-var getOutboundFlights = require('./models/flight_api').getOutboundFlights;
-var getFlightPrice = require('./models/flight_api').getFlightPrice;
 
 $(document).ready(function() {
   function showElement(id) { $(id).show(); }
@@ -20,6 +17,10 @@ $(document).ready(function() {
   $('#slider').hide();
   hidePage();
   showElement('#home');
+  console.log(getFlightData('SYD', 'LON', '2016-05-06'));
+
+  var origin = document.getElementById('origin');
+  var destination = document.getElementById('destination');
 
   $('#get-started').click(function(e) {
     e.preventDefault();
@@ -28,11 +29,22 @@ $(document).ready(function() {
   })
 
   $('#where-to-go-button').click(function(e) {
+    e.preventDefault();
     $('#video').hide();
     getFlickrImagesByTag($('#where-to-go-input').val(), changeBg);
     $('#slider').show();
     hidePage();
     showElement('#flights-search-form');
   });
+
+  $('#show-flight-results-button').click(function(e) {
+    e.preventDefault();
+    console.log('2016-04-13');
+    console.log(departureDate);
+    console.log(departureDate == '2016-04-13');
+    // hidePage();
+    getFlightData(origin.value.substring(0, 3), destination.value.substring(0, 3), departureDate, populateFlightsView);
+    showElement('#flights-result-container');
+  })
 
 });
