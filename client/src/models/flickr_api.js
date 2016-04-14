@@ -9,6 +9,9 @@ function getFlickrImagesByTag(tags, callback) {
   flickr.photos.search({
     text: tags,
     privacy_filter: 1,
+    safe_search: 1,
+    // tag_mode: 'all',
+    // sort: 'relevance',
     group_id: '41425956@N00',
     per_page: 20,
     page: 1,
