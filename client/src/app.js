@@ -53,13 +53,29 @@ $(document).ready(function() {
     e.preventDefault();
     hidePage();
     getFlightData(origin.value.substring(0, 3), destination.value.substring(0, 3), departureDate, populateFlightsView);
-    showElement('flights-result-container');
+    showElement('flight-results');
   }
 
   document.getElementById('move-next').onclick = function(e) {
     e.preventDefault();
     hidePage();
-    showElement('accommodation-container1');
+    showElement('accomodation-page');
+  }
+
+  document.getElementById('select-hotel-1').onclick = function(e) {
+    e.preventDefault();
+    document.querySelector('.two').classList.remove('selected');
+    this.parentNode.className = 'accomodation-style one';
+    this.parentNode.className += ' selected';
+    showElement('move-next');
+  }
+
+  document.getElementById('select-hotel-2').onclick = function(e) {
+    e.preventDefault();
+    document.querySelector('.one').classList.remove('selected');
+    this.parentNode.className = 'accomodation-style two';
+    this.parentNode.className += ' selected';
+    showElement('move-next');
   }
 
 });

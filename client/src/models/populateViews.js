@@ -27,7 +27,7 @@ function populateFlightsView(data) {
 }
 
 function createCard(index) {
-  var flightResultsContainer = document.querySelector('.flight-results-container');
+  var flightResultsContainer = document.querySelector('#flight-results-container');
   card = document.createElement('section');
   var div = document.createElement('div');
 
