@@ -86,7 +86,3 @@ function writeCardContents(data, index) {
 module.exports = {
   populateFlightsView: populateFlightsView
 }
-
-// for each result
-// grab details
-// print card with details
