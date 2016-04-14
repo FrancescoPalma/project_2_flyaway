@@ -56,4 +56,10 @@ $(document).ready(function() {
     showElement('flights-result-container');
   }
 
+  document.getElementById('move-next').onclick = function(e) {
+    e.preventDefault();
+    hidePage();
+    showElement('accommodation-container1');
+  }
+
 });

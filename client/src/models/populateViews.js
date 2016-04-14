@@ -19,6 +19,8 @@ function populateFlightsView(data) {
     button.onclick = function() {
       this.parentNode.className = 'flight-card';
       this.parentNode.className = 'flight-card selected';
+      console.log("logging the arrow: ", document.getElementById('move-next'));
+      document.getElementById('move-next').style.display = 'block';
     }
   }
   // var buttons =  document.querySelectorAll('#select-flight-button');
