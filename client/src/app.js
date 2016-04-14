@@ -15,6 +15,11 @@ var origin = document.getElementById('origin');
 var destination = document.getElementById('destination');
 
 $(document).ready(function() {
+
+  hideElement('slider');
+  hidePage();
+  showElement('home');
+
   function showElement(id) {
     document.getElementById(id).style.display = 'block';
   }
@@ -28,12 +33,6 @@ $(document).ready(function() {
   function hideElement(id) {
     document.getElementById(id).style.display = 'none';
   }
-
-  hideElement('slider');
-  hidePage();
-  showElement('home');
-  // $('#slider').hide();
-  // showElement('#flights-result-container');
 
   document.getElementById('get-started').onclick = function(e) {
     e.preventDefault();

@@ -16,19 +16,12 @@ function populateFlightsView(data) {
     createCard(itinerary);
     console.log("writing stuff to a card");
     writeCardContents(data, itinerary);
-
+    button.onclick = function() {
+      this.parentNode.className = 'flight-card';
+      this.parentNode.className = 'flight-card selected';
+    }
   }
-  var buttons =  document.querySelectorAll('.select-card');
-  console.log("number of buttons", buttons.length);
-  for (var i = 0; i < buttons.length; i++) {
-    console.log("adding an event listener to", button[i]);
-    var self = buttons[i];
-    self.addEventListener('click', function (event) {
-      event.preventDefault;
-      self.parentNode.className = "flight-card";
-      self.parentNode.className += " selected";
-    }, false);
-  }
+  // var buttons =  document.querySelectorAll('#select-flight-button');
 }
 
 function createCard(index) {
