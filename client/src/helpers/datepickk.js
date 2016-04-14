@@ -9,6 +9,7 @@ window.onload = function() {
 
     datepicker.onSelect = function() {
       datepicker.range = true;
+      datepicker.button = "DONE";
       var getFirstDate = this.toLocaleDateString();
       var formatDate = getFirstDate.split('/');
       var day = formatDate[1];
