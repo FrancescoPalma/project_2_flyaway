@@ -21,9 +21,10 @@ window.onload = function() {
       } else {
         newMonth = month;
       }
-      console.log(newMonth);
       var formattedDate = year + "-" + newMonth + "-" + day;
       departureDate = formattedDate;
+      var firstDate = document.getElementById('first-date');
+      firstDate.innerHTML = "From: " + departureDate;
 
     datepicker.onSelect = function() {
       var getSecondDate = this.toLocaleDateString();
@@ -39,6 +40,9 @@ window.onload = function() {
       console.log(newMonth);
       var formattedDate = year + "-" + newMonth + "-" + day;
       returnDate = formattedDate;
+      var secondDate = document.getElementById('second-date');
+      secondDate.innerHTML = "To: " + departureDate;
+
       }
     }
   }

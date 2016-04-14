@@ -67,25 +67,25 @@ function getCardIds(index) {
 
 function writeCardContents(data, index) {
   originCityName.className = 'origin-city';
-  originCityName.innerHTML = 'From: ' + getOriginIata(data, index);
+  originCityName.innerHTML = "From: " + origin.value.substring(6, origin.value.length);
 
   destinationCityName.className = 'destination-city';
-  destinationCityName.innerHTML = 'To: ' + getDestinationIata(data, index);
+  destinationCityName.innerHTML = 'To: ' + destination.value.substring(6, destination.value.length);
 
   originIATA.className = 'origin-iata';
-  originIATA.innerHTML = "Origin IATA " + getOriginIata(data, index);
+  originIATA.innerHTML = "Origin IATA: " + getOriginIata(data, index);
 
   destinationIATA.className = 'destination-iata';
-  destinationIATA.innerHTML = "Destination IATA " + getDestinationIata(data, index);
+  destinationIATA.innerHTML = "Destination IATA:  " + getDestinationIata(data, index);
 
   flightDuration.className = 'flight-duration';
-  flightDuration.innerHTML = "Flight Duration " + getFlightDuration(data, index) + "h";
+  flightDuration.innerHTML = "Flight Duration: " + getFlightDuration(data, index) + "h";
 
   flightPrice.className = 'flight-price';
-  flightPrice.innerHTML = "Flight Price " + getTotalFlightPrice(data, index);
+  flightPrice.innerHTML = "Flight Price: £" + getTotalFlightPrice(data, index);
 
   numberStopovers.className = 'number-stopovers';
-  numberStopovers.innerHTML = "Stopovers " + getNumberOfStopovers(data, index);
+  numberStopovers.innerHTML = "Stopovers: " + getNumberOfStopovers(data, index);
 }
 
 module.exports = {
