@@ -65,11 +65,25 @@ $(document).ready(function() {
   document.getElementById('select-hotel-1').onclick = function(e) {
     e.preventDefault();
     showElement('move-next');
+    document.getElementById('move-next').id = 'email-confirmation';
   }
 
   document.getElementById('select-hotel-2').onclick = function(e) {
     e.preventDefault();
     showElement('move-next');
+    document.getElementById('move-next').id = 'email-confirmation';
+  }
+
+  document.getElementById('email-confirmation').onclick = function(e) {
+    e.preventDefault();
+    hidePage();
+    showElement('email-box');
+  }
+
+  document.getElementById('submit-email').onclick = function(e) {
+    e.preventDefault();
+    hidePage();
+    showElement('success-page');
   }
 
 });
