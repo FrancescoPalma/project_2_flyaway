@@ -3,9 +3,8 @@ html, body, #page {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
 }
-/* "origin-cityname", "destination-cityname", "origin-iata", "destination-iata", "flight-duration", "flight-price", "number-stopovers", "arrow" */
+
 .flight-card {
   text-align: center;
   width: 250px;
@@ -60,21 +59,8 @@ html, body, #page {
   top: 0;
   left: 0;
   background-size: cover;
-
-  /* Preserve aspet ratio */
   min-width: 100%;
   min-height: 100%;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  text-align: center;
-  font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
-  letter-spacing: 0.3rem;
-  font-size: 3.5rem;
-  font-weight: 100;
-  color: #fff;
 }
 
 #video {
@@ -112,16 +98,17 @@ header {
   margin: 0 auto;
 }
 
-h1.title {
+h1 {
   text-align: center;
   font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
   letter-spacing: 0.3rem;
   font-size: 15rem;
   font-weight: 100;
-  color: white;
+  color: #fff;
 }
 
 .question-text {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   text-align: center;
   color: #fff;
   font-weight: 100;
@@ -129,7 +116,7 @@ h1.title {
 }
 
 .nice-button {
-  border: 2px lightblue;
+  border: 2px #82cafa;
   font-size: 1.3rem;
   background: rgba(255,255,255,0.23);
   color: black;
@@ -221,7 +208,7 @@ h1.title {
 }
 
 .date-picker-btn {
-  border: 2px lightblue;
+  border: 2px #82cafa;
   font-size: 1.3rem;
   background: rgba(255,255,255,0.23);
   color: black;
@@ -230,27 +217,13 @@ h1.title {
 }
 
 .date-picker-btn:hover {
-  background: #000;
+  background: #82cafa;
   color: #fff;
 }
-
-/* details-button {
-  border: none;
-  font-size: 1.3rem;
-  background: rgba(255,255,255,0.23);
-  color: #000;
-  border-radius: 1.5rem;
-  transition: .3s background;
-}
-
-#details-button:hover {
-  background: #000;
-  color: #fff;
-} */
 /*END FLIGHT FORM STYLE*/
 
 /*ACCOMMODATION STYLE*/
-.accommodation-container {
+.accommodation-style {
   align-items: center;
   display: flex;
   height: 100%;
@@ -268,7 +241,7 @@ h1.title {
   height: 500px;
   overflow: hidden;
   width: 100%;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .card #card-bg-image img {
@@ -284,18 +257,26 @@ h1.title {
   width: 35%;
 }
 
-.content h3 {
+.content h5 {
   color: black;
   font-weight: 100;
   margin-bottom: 2.5rem;
   text-align: center;
 }
 
-.content ul {
+.content p {
   font-weight: 300;
   line-height: 1.4em;
   text-align: justify;
   padding: 0.5rem;
+}
+
+.description h3 {
+  text-align: center;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 4rem;
+  font-weight: 100;
+  color: black;
 }
 
 .description img {
@@ -309,7 +290,6 @@ h1.title {
 .btn {
   width: 25%;
   margin: auto;
-
   background: #fff;
   padding: 20px 0;
   color: #82cafa;
@@ -319,25 +299,35 @@ h1.title {
   transition: all 0.3s;
 }
 
+.acc-btn {
+  border: 2px #82cafa;
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: black;
+  border-radius: 30px;
+  transition: .3s background;
+}
+
+.acc-btn:hover {
+  background: #82cafa;
+  color: #fff;
+}
+
 .card-bg-image {
-  /*background-size: cover;
-*/  height: 500px;
+  height: 500px;
   width: 500px;
   margin-bottom: 2.5rem;
 }
-
 /*END ACCOMMODATION STYLE*/
 
-/*!!!!!!!!BOX!!!!!!!!!!!!!!!!!!*/
+/*BOX*/
 #boxbody {
   width: 100%;
   background: #f0f0f0;
   height: 100%;
   padding: 80px 0 100px;
   font-family: 'Hind';
-
 }
-
 
 #row {
   width: 100%;
@@ -371,9 +361,7 @@ h1.title {
 }
 
 .standard {
-
   background: #fff;
-
 }
 
 /*price text*/
@@ -424,7 +412,6 @@ h1.title {
   border: 2px #414142 solid;
 }
 
-
 .fineprint {
   color: #333333;
   font-size: 16px;
@@ -432,7 +419,6 @@ h1.title {
   padding: 28px 20px 0;
   line-height: 1.25em;
 }
-
 
 #pricingCard {
   position: fixed;
@@ -443,7 +429,6 @@ h1.title {
   width: 260px;
   margin: 0 auto;
   text-align: center;
-
   position: relative;
   opacity: 0.8;
 }
@@ -529,10 +514,7 @@ h1.title {
   padding: 8px 0 5px
 }
 
-/*button text*/
 #btnOne {
-
-
   display: inline-block;
   border-radius: 1.5rem;
   margin: 0 auto;
@@ -546,7 +528,6 @@ h1.title {
 
 #btnOne:hover {
   cursor: pointer;
-
 }
 
 #bottom {
@@ -572,17 +553,19 @@ h1.title {
   text-align: left;
   padding-left: 20px;
 }
+
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 100%;
-  height: 2.6rem;
+  height: 8rem;
+  line-height: 8rem;
   background: black;
 }
 
 footer p {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #fff;
 }
