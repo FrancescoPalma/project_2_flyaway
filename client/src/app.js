@@ -10,38 +10,51 @@ var populateFlightsView = require('./models/populateViews').populateFlightsView;
 var changeBg = require('./helpers/slider.js');
 var getFlickrImagesByTag = require('./models/flickr_api').getFlickrImagesByTag;
 var getFlightData = require('./models/flight_api').getFlightData;
+var mainPages = document.querySelectorAll('.page');
+var origin = document.getElementById('origin');
+var destination = document.getElementById('destination');
 
 $(document).ready(function() {
-  function showElement(id) { $(id).show(); }
-  function hidePage() { $('.page').hide(); }
-  $('#slider').hide();
+  function showElement(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function hidePage() {
+    for (var i = 0; i < mainPages.length; i++) {
+      mainPages[i].style.display = 'none';
+    }
+  }
+
+  function hideElement(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+  hideElement('slider');
   hidePage();
-  showElement('#home');
-  showElement('#flights-result-container');
+  showElement('home');
+  // $('#slider').hide();
+  // showElement('#flights-result-container');
 
-  var origin = document.getElementById('origin');
-  var destination = document.getElementById('destination');
-
-  $('#get-started').click(function(e) {
+  document.getElementById('get-started').onclick = function(e) {
     e.preventDefault();
     hidePage();
-    showElement('#where-to-go');
-  })
+    showElement('where-to-go');
+  }
 
-  $('#where-to-go-button').click(function(e) {
+  document.getElementById('where-to-go-button').onclick = function(e) {
     e.preventDefault();
-    $('#video').hide();
-    getFlickrImagesByTag($('#where-to-go-input').val(), changeBg);
-    $('#slider').show();
+    hideElement('video');
+    getFlickrImagesByTag(document.getElementById('where-to-go-input').value, changeBg);
+    showElement('slider');
     hidePage();
-    showElement('#flights-search-form');
-  });
+    showElement('flights-search-form');
+  }
 
-  $('#show-flight-results-button').click(function(e) {
+  document.getElementById('show-flight-results-button').onclick = function(e) {
     e.preventDefault();
     hidePage();
     getFlightData(origin.value.substring(0, 3), destination.value.substring(0, 3), departureDate, populateFlightsView);
-    showElement('#flights-result-container');
-  })
+    showElement('flights-result-container');
+  }
 
 });
