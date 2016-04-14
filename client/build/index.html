@@ -3,9 +3,11 @@
 <head>
   <title>FlyAway</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="helpers/datepickk.min.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:100, 400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -20,17 +22,6 @@
   </div>
 
   <div id="home" class="page">
-
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="twelve columns">
-            <p>FLYAWAY</p>
-          </div>
-        </div>
-      </div>
-    </header>
-
     <div class="container">
       <div class="row">
         <div class="twelve columns">
@@ -41,7 +32,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
   <div id="where-to-go" class="page">
@@ -50,18 +40,77 @@
         <div class="twelve colums">
           <div class="text-form-container">
             <h3 class="question-text">Where do you want to go?</h3>
-            <input id="destination-input" type="text" placeholder="Bahamas, Lisbon..."></input>
-            <button id="destination-button" class="nice-button">GO</button>
+            <input id="where-to-go-input" type="text" placeholder="Bahamas, Lisbon..."></input>
+            <button id="where-to-go-button" class="nice-button">GO</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <div id="flights-search-form" class="page">
+    <div class="form">
+      <h2 class="form-header">
+        Flights
+        <img src="./assets/plane.ico">
+      </h2>
+      <form id="flight-form" method="get" accept-charset="utf-8">
+        <p>Departing from</p>
+        <p><input id="origin" type="text" placeholder="City name or airport code"></input></p>
+        <p>Going to</p>
+        <p><input id="destination" type="text" placeholder="City name or airport code"></input></p>
+        <button class="date-picker-btn">Pick the Dates</button>
+        <span id="first-date"></span>
+        <span id="second-date"></span>
+        <button class="nice-button" id="show-flight-results-button">Next</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="flight-results-container" class="page">
+    <div class="container">
+
+    </div>
+  </div>
+
+<!--
+    <div class="accommodation-container">
+
+      <div class="card">
+        <div id="card-bg-image">
+          <img src="./assets/accommodation-example.jpg">
+        </div>
+        <div class="content">
+          <div class="description">
+            <h3>Your Accommodation</h3>
+            <img src="./assets/accommodation.png">
+            <ul>
+              <li>Descripition from Accommodation API goes here.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Curabitur vulputate nisi eget lectus hendrerit, facilisis tincidunt mi vehicula.</li>
+              <li>Nullam non odio ultrices, luctus est vitae, suscipit felis.</li>
+              <li>Ut tempor, augue vitae accumsan venenatis, arcu sem posuere lorem, a sodales massa erat eu purus.</li>
+            </ul>
+            <button id="button">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div id="flight-results" class="">
+    <div class="container flight-results-container">
+    </div>
+  </div>
+
   <footer>
-     <p>2016 - © All Rights Reserved - Designed & Developed by <b style="color:#82cafa ">Team Mercury</b></p>
-   </footer>
+    <p>2016 - © All Rights Reserved - Designed & Developed by <b style="color:#82cafa ">Team Mercury</b></p>
+  </footer>
+
 <script src="https://code.jquery.com/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.10.0/lodash.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+<script src="helpers/datepickk.min.js"></script>
 <script src="bundle.js"></script>
 </body>
 </html>
