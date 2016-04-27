@@ -3,4 +3,3 @@ node_js:
   - "0.12"
 notifications:
   email: false
-  slack: codeclanteam:Y2Bs3MP1lAyDzslrPFjHs9JL
